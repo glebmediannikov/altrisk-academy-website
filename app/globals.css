@@ -13,6 +13,11 @@ a:focus-visible,button:focus-visible,input:focus-visible { outline:3px solid #13
 .hero-pill { letter-spacing:.09em; }
 .hero-copy h1 { letter-spacing:-.05em; }
 .path-card,.article-card,.module-card,.value-card,.lab-feature { transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease; }
+.brand-image { display:block; object-fit:contain; flex:none; }
+.header-brand-image { width:72px; height:72px; }
+.footer-brand-image { width:88px; height:88px; }
+@media(max-width:900px) { .header-brand-image { width:60px; height:60px; } }
+@media(max-width:650px) { .footer-brand-image { width:76px; height:76px; } }
 @media (hover:hover) { .path-card:hover,.article-card:hover,.module-card:hover,.value-card:hover,.lab-feature:hover { transform:translateY(-4px); box-shadow:0 20px 42px rgba(13,33,62,.11); } }
 .ara-learning-status { display:inline-flex;gap:.45rem;align-items:center;font-size:.74rem;font-weight:750;color:#056d68;background:#def7f2;border-radius:99px;padding:.35rem .72rem; }
 .ara-learning-status.future { color:#64748b;background:#ecf0f5; }
