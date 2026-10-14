@@ -47,3 +47,5 @@ Edit `lib/data.ts` for sample lessons, dictionary entries, and learning tracks. 
 ## Design
 
 Navy #10233F; teal #147D92; clean white/light backgrounds; responsive layout. Main styles are in `app/globals.css`.
+
+Website deployed with Vercel
