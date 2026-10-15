@@ -1,1 +1,34 @@
-import type {MetadataRoute} from 'next';import {paths,lessons} from '../lib/data';export default function sitemap():MetadataRoute.Sitemap{const base=process.env.NEXT_PUBLIC_SITE_URL||'https://example.com';const routes=['','/learn','/risk-lab','/challenges','/dictionary','/for-educators','/about','/articles',...paths.map(p=>'/learn/'+p.slug),...lessons.map(l=>'/articles/'+l.slug)];return routes.map(r=>({url:base+r,changeFrequency:'monthly' as const,priority:r===''?1:r==='/learn'||r==='/risk-lab'?.9:.6}))}
+import type {MetadataRoute} from 'next';
+import {lessons, paths} from '../lib/data';
+
+const siteUrl = 'https://altriskacademy.com';
+const staticRoutes = [
+  '/',
+  '/learn',
+  '/risk-lab',
+  '/challenges',
+  '/dictionary',
+  '/for-educators',
+  '/about',
+  '/articles',
+];
+const validSlug = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
+
+export default function sitemap(): MetadataRoute.Sitemap {
+  const routes = [
+    ...staticRoutes,
+    ...paths
+      .filter(({slug}) => validSlug.test(slug))
+      .map(({slug}) => `/learn/${slug}`),
+    ...lessons
+      .filter(({slug}) => validSlug.test(slug))
+      .map(({slug}) => `/articles/${slug}`),
+  ];
+  const uniqueRoutes = [...new Set(routes)];
+
+  return uniqueRoutes.map((route) => ({
+    url: new URL(route, siteUrl).toString(),
+    changeFrequency: 'monthly',
+    priority: route === '/' ? 1 : route === '/learn' || route === '/risk-lab' ? 0.9 : 0.6,
+  }));
+}
