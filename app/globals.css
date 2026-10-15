@@ -40,3 +40,17 @@ a:focus-visible,button:focus-visible,input:focus-visible { outline:3px solid #13
 .ara-skip:focus{top:12px;}
 @media(max-width:760px){ .ara-educator-band{grid-template-columns:1fr;} .ara-educator-band .button{justify-self:start;} .ara-featured-term{align-items:start;} }
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;} .path-card,.article-card,.module-card,.value-card,.lab-feature{transition:none!important;transform:none!important;}}
+.privacy-consent{position:fixed;z-index:100;inset:auto 20px 20px;max-width:760px;margin-inline:auto;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:22px 24px;background:#fff;border:1px solid #d6e2e8;border-radius:14px;box-shadow:0 12px 40px #10233f30;color:var(--ink);}
+.privacy-consent-copy{min-width:0;}
+.privacy-consent h2{margin:0 0 7px;color:var(--navy);font-size:20px;letter-spacing:-.035em;}
+.privacy-consent p{margin:0;font-size:13px;line-height:1.55;color:#526579;}
+.privacy-consent .privacy-consent-current{margin-top:6px;font-weight:700;}
+.privacy-consent .privacy-consent-error{margin-top:8px;color:#a52b2b;font-weight:700;}
+.privacy-consent-actions{display:flex;flex:0 0 auto;gap:10px;}
+.privacy-consent-actions button{min-height:44px;padding:10px 16px;border:2px solid var(--teal);border-radius:8px;background:#fff;color:var(--teal);font-size:14px;font-weight:760;}
+.privacy-consent-actions button:last-child{background:var(--teal);color:#fff;}
+.privacy-consent-actions button:hover{border-color:#0c677b;background:#0c677b;color:#fff;}
+.privacy-consent button:focus-visible,.privacy-settings-button:focus-visible{outline:3px solid #10233f;outline-offset:3px;}
+.privacy-settings-button{margin-top:8px;padding:0;border:0;background:transparent;color:inherit;text-align:left;font:inherit;font-size:13px;font-weight:700;text-decoration:underline;text-underline-offset:3px;}
+@media(max-width:760px){.privacy-consent{inset:auto 12px 12px;align-items:stretch;flex-direction:column;gap:16px;padding:18px;}.privacy-consent-actions{display:grid;grid-template-columns:1fr 1fr;}.privacy-consent-actions button{padding:10px 8px;}}
+@media(prefers-reduced-motion:reduce){.privacy-consent-actions button{transition:none;}}

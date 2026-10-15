@@ -36,4 +36,10 @@ npm run dev
 
 No secrets should be committed. `.env.example` is a template.
 
+## Google Analytics
+
+Google Analytics 4 uses the official `@next/third-parties/google` integration and is restricted to production builds. A first-party consent banner offers equally accessible Decline and Accept Analytics actions; analytics stays disabled unless the visitor explicitly opts in. The Footer's Privacy Settings control reopens the choice. Google Signals and advertising personalization are disabled, and no user ID is configured.
+
+The preference is stored in `localStorage` under `altrisk-analytics-consent`. Declining or revoking consent disables future GA collection and attempts to remove accessible first-party Google Analytics cookies for the current host and the site's `altriskacademy.com` domain. Browser restrictions can prevent deletion of cookies outside the current path/domain or otherwise inaccessible to JavaScript. Revocation does not erase data Google has already received. These settings apply only to this Next.js website; no analytics has been added to Streamlit applications.
+
 **Scope note:** This is a design and presentation release. It does not implement accounts, credentials, scoring, certificates, or new simulator logic.
