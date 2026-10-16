@@ -1,0 +1,19 @@
+congressional-app-challenge
+  public\competitions\congressional-app-challenge.webp
+  https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/1693591856167-P1AIA175FK3ADFVCROGH/Logo%2Bwith%2BDome%2B%28Transparent%29_0.png?format=2500w
+
+nfte-wsi
+  public\competitions\nfte-wsi.png
+  https://af4-california-production.imgix.net/files/b/2/J/y/0/c/ThiSXlf0Sc/file.png?ixlib=php-4.1.0
+
+diamond-challenge
+  DOWNLOAD FAILED
+  https://www.tfaforms.com/forms/get_image/188195/UsPkEJvN6Ta7g7g1q1FRGcrNszzWAXTe2TLTKVa07hZcFmNaDSxgzzAau6hTAoBr-DC_logo_full_UD.png
+
+blue-ocean
+  public\competitions\blue-ocean.webp
+  https://static1.squarespace.com/static/65c9c2afdad4152feafc32ac/6793320f5279b176c53c70b3/69367a0c04c5f3143169b93d/1765178573898/download%2B%2826%29%2B%281%29.png?format=1500w
+
+sci-youth-grant
+  public\competitions\sci-youth-grant.jpg
+  https://pbs.twimg.com/profile_images/1966088637432352768/bJyTHYXe.jpg
