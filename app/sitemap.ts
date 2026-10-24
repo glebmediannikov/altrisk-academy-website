@@ -7,6 +7,8 @@ const staticRoutes = [
   '/learn',
   '/risk-lab',
   '/challenges',
+  '/green-investing',
+  '/responsible-consumption',
   '/dictionary',
   '/for-educators',
   '/about',

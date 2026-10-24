@@ -2,11 +2,15 @@ import Image from 'next/image';
 import {PageIntro, Cta} from '../../components/common';
 import {Icon} from '../../components/icon';
 import type {Metadata} from 'next';
+import Link from 'next/link';
+import {pageMetadata} from '../../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/about',
   title: 'Our Mission & Founder',
-  description: 'Meet AltRisk Academy, an interactive risk management education initiative founded by Maria Mediannikova.',
-};
+  description:
+    'Meet AltRisk Academy and its founder, Maria Mediannikova, a student and financial literacy advocate.',
+});
 
 const competitions = [
   {
@@ -96,9 +100,9 @@ export default function About() {
             <span className="eyebrow"><span className="eyebrow-dot"/> MEET THE FOUNDER</span>
             <h2>Maria Mediannikova</h2>
             <p>
-              AltRisk Academy was founded by student innovator Maria Mediannikova with a simple
-              idea: young people deserve a practical introduction to understanding and managing
-              risks.
+              AltRisk Academy was founded by{' '}
+              <Link href="https://mariammediannikova.com/" target="_blank" rel="noopener noreferrer">Maria Mediannikova</Link>
+              {', a student and financial literacy advocate passionate about making financial risk education more accessible through interactive learning.'}
             </p>
             <p>
               The project began with interactive financial tools and is evolving into a broader

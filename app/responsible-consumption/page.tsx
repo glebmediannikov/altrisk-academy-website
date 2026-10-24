@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import {ORGANIZATION_ID, pageMetadata} from '../../lib/seo';
 
 const canonical = 'https://altriskacademy.com/responsible-consumption';
 const labUrl = 'https://altrisk-academy.streamlit.app/?lab=responsible-consumption';
-export const metadata: Metadata = {
-  title: 'Solar Panel Savings & Responsible Consumption Lab | AltRisk Academy',
-  description: 'Compare a home with and without solar panels, explore energy costs, LED efficiency, transport and sustainable purchases in a free interactive learning lab.',
-  alternates: { canonical },
-  openGraph: { title: 'Responsible Consumption Lab | AltRisk Academy', description: 'Explore household costs and sustainability in interactive simulations.', url: canonical, type: 'website' },
-};
+export const metadata: Metadata = pageMetadata({
+  path: '/responsible-consumption',
+  title: 'Solar Panel Savings & Responsible Consumption Lab',
+  description:
+    'Compare a home with and without solar panels, explore energy costs, LED efficiency, transport and sustainable purchases in a free interactive learning lab.',
+});
 const faq = [
   { q: 'How does the solar panel comparison work?', a: 'The simulator compares illustrative cumulative electricity costs for a home with and without solar. Results depend on assumptions such as system price, household usage, electricity rates, and solar coverage.' },
   { q: 'Will solar panels always save money?', a: 'No. Savings and payback vary with local conditions, incentives, financing, maintenance, system output, and electricity prices. The lab demonstrates trade-offs rather than offering a home-specific quote.' },
@@ -22,7 +23,7 @@ export default function ResponsibleConsumption() {
     description: 'Free interactive household sustainability and solar panel cost comparison for students.',
     educationalUse: 'simulation', learningResourceType: 'interactive simulation',
     isAccessibleForFree: true, inLanguage: 'en',
-    provider: { '@type': 'Organization', name: 'AltRisk Academy', url: 'https://altriskacademy.com' },
+    provider: {'@id': ORGANIZATION_ID},
   };
   return (
     <main className="container section">

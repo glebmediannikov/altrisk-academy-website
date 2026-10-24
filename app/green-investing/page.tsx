@@ -1,14 +1,15 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
+import {ORGANIZATION_ID, pageMetadata} from '../../lib/seo';
 
 const canonical = 'https://altriskacademy.com/green-investing';
 const labUrl = 'https://altrisk-academy.streamlit.app/?lab=green-investing';
-export const metadata: Metadata = {
-  title: 'Green Investing Simulator for Students | AltRisk Academy',
-  description: 'Explore ESG investing, clean energy stocks, green ETFs, diversification, and investment risk with a free educational portfolio simulator for students.',
-  alternates: { canonical },
-  openGraph: { title: 'Green Investing Lab | AltRisk Academy', description: 'Build a virtual green investment portfolio and explore risk scenarios.', url: canonical, type: 'website' },
-};
+export const metadata: Metadata = pageMetadata({
+  path: '/green-investing',
+  title: 'Green Investing Simulator for Students',
+  description:
+    'Explore ESG investing, clean energy stocks, green ETFs, diversification, and investment risk with a free educational portfolio simulator for students.',
+});
 
 const faq = [
   { q: 'What is green investing?', a: 'Green investing is an approach that considers environmental activities or goals alongside financial characteristics. Environmental labels do not guarantee lower risk or higher returns.' },
@@ -23,7 +24,7 @@ export default function GreenInvesting() {
     description: 'Free educational green-investing simulation for students.',
     educationalUse: 'simulation', learningResourceType: 'interactive simulation',
     isAccessibleForFree: true, inLanguage: 'en',
-    provider: { '@type': 'Organization', name: 'AltRisk Academy', url: 'https://altriskacademy.com' },
+    provider: {'@id': ORGANIZATION_ID},
   };
   return (
     <main className="container section">

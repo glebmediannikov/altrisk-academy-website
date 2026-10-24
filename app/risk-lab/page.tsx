@@ -3,12 +3,14 @@ import { PageIntro, Cta } from '../../components/common';
 import { Icon } from '../../components/icon';
 import { APP_ACADEMY, APP_CALCULATOR } from '../../lib/data';
 import type { Metadata } from 'next';
+import {pageMetadata} from '../../lib/seo';
 
-export const metadata: Metadata = {
+export const metadata: Metadata = pageMetadata({
+  path: '/risk-lab',
   title: 'Interactive Risk Lab & Financial Simulators',
   description:
     'Practice risk management through free interactive financial, green investing, and sustainable living simulations.',
-};
+});
 
 const modules = [
   {
