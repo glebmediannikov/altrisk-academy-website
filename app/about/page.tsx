@@ -101,7 +101,7 @@ export default function About() {
             <h2>Maria Mediannikova</h2>
             <p>
               AltRisk Academy was founded by{' '}
-              <Link href="https://mariammediannikova.com/" target="_blank" rel="noopener noreferrer">Maria Mediannikova</Link>
+              <Link href="https://mariamediannikova.com/" target="_blank" rel="noopener noreferrer">Maria Mediannikova</Link>
               {', a student and financial literacy advocate passionate about making financial risk education more accessible through interactive learning.'}
             </p>
             <p>

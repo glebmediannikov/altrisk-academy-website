@@ -25,7 +25,7 @@ export function Footer() {
           <span className="micro">Free educational resources · No real money required</span>
           <p className="micro">
             Founded by{' '}
-            <a href="https://mariammediannikova.com/" target="_blank" rel="noopener noreferrer">
+            <a href="https://mariamediannikova.com/" target="_blank" rel="noopener noreferrer">
               Maria Mediannikova
             </a>
           </p>

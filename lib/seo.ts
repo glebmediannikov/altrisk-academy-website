@@ -2,7 +2,7 @@ import type {Metadata} from 'next';
 
 export const SITE_URL = 'https://altriskacademy.com';
 export const ORGANIZATION_ID = `${SITE_URL}/#organization`;
-export const FOUNDER_ID = 'https://mariammediannikova.com/#person';
+export const FOUNDER_ID = 'https://mariamediannikova.com/#person';
 export const FINANCIAL_EDUCATION_DISCLAIMER =
   'AltRisk Academy provides educational information and interactive simulations only. It does not provide personalized financial, investment, tax, or legal advice.';
 
