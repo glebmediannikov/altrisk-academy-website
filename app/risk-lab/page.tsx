@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { PageIntro, Cta } from '../../components/common';
 import { Icon } from '../../components/icon';
 import { APP_ACADEMY, APP_CALCULATOR } from '../../lib/data';
@@ -75,11 +76,12 @@ const modules = [
     cat: 'SUSTAINABLE FINANCE · VIRTUAL PORTFOLIO',
     desc: 'Build a virtual green investment portfolio using a selected universe of clean-energy stocks and funds. Explore how market and climate-related scenarios affect risk and returns.',
     icon: 'chart',
-    href: `${APP_ACADEMY}?lab=green-investing`,
-    action: 'Open Green Investing Lab',
+    href: 'https://altrisk-academy.streamlit.app/?lab=green-investing',
+    learnHref: '/green-investing',
+    action: 'Launch Simulator',
     level: 'Beginner / Intermediate',
     steps: [
-      'Launch the lab directly from this page.',
+      'Learn the basics of sustainable investing on the dedicated learning page.',
       'Allocate virtual money among the available green investment securities.',
       'Test market scenarios and compare potential gains, losses, and concentration risk.',
     ],
@@ -90,11 +92,12 @@ const modules = [
     cat: 'SUSTAINABLE LIVING · EVERYDAY DECISIONS',
     desc: 'Compare everyday choices through practical simulations: rooftop solar versus grid electricity, school lighting upgrades, transportation, and buying or repairing products.',
     icon: 'shield',
-    href: `${APP_ACADEMY}?lab=responsible-consumption`,
-    action: 'Open Responsible Consumption Lab',
+    href: 'https://altrisk-academy.streamlit.app/?lab=responsible-consumption',
+    learnHref: '/responsible-consumption',
+    action: 'Launch Simulator',
     level: 'Beginner',
     steps: [
-      'Launch the lab directly from this page.',
+      'Learn how sustainable everyday decisions affect costs and resources.',
       'Adjust costs and assumptions to compare a house with and without solar panels.',
       'Explore how alternative energy, transport, and shopping choices change long-term outcomes.',
     ],
@@ -140,23 +143,30 @@ export default function RiskLab() {
                     Tip: These tools use simplified learning scenarios, not personal investment recommendations.
                   </p>
                 </div>
-                <a
-                  className="button"
-                  href={m.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {m.action} <Icon name="external" size={17} />
-                </a>
+                <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14 }}>
+                  {'learnHref' in m && m.learnHref && (
+                    <Link className="button" href={m.learnHref}>
+                      Learn &amp; Explore <Icon name="arrow" size={17} />
+                    </Link>
+                  )}
+                  <a
+                    className={'learnHref' in m ? 'text-link' : 'button'}
+                    href={m.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {m.action} <Icon name="external" size={17} />
+                  </a>
+                </div>
               </div>
             </div>
           ))}
         </div>
         <p className="lab-disclaimer">
           <Icon name="help" size={17} /> Interactive tools open in a separate Streamlit app.
-          For Academy labs, select the named module in the app sidebar. All investments and
-          savings estimates are educational illustrations; app availability and details depend
-          on the current deployment.
+          For the two climate labs, you can read the lesson first or launch the simulator directly.
+          Other Academy labs can be selected in the app sidebar. All investments and savings
+          estimates are educational illustrations; app availability and details depend on the current deployment.
         </p>
         <p className="lab-disclaimer">
           Climate education topics are informed in part by the Massachusetts Youth Climate
