@@ -71,3 +71,20 @@ a:focus-visible,button:focus-visible,input:focus-visible { outline:3px solid #13
 .competition-info p{margin:10px 0 0;color:var(--muted);font-size:14px;line-height:1.6;}
 @media(max-width:760px){.competition-card{grid-template-columns:120px minmax(0,1fr);gap:16px;padding:15px;}.competition-logo{height:110px;padding:9px;}.competition-logo-placeholder{padding:10px;font-size:13px;}.competition-info h3{font-size:16px;}.competition-title-row{gap:6px;}}
 @media(max-width:420px){.competition-card{grid-template-columns:1fr;}.competition-logo{height:120px;max-width:none;}.competition-title-row{align-items:flex-start;}}
+
+.article-byline{align-items:flex-start}
+.article-author-bio{margin:7px 0 0;color:var(--muted);font-size:12px;font-weight:400;line-height:1.65}
+.article-content-section{margin-top:38px}
+.article-content-section h2,.article-takeaways h2{font-size:clamp(23px,3vw,28px);line-height:1.25;color:var(--navy);margin:0 0 14px}
+.article-content-section p{margin-bottom:17px}
+.article-takeaways{align-items:flex-start;margin-top:35px}
+.article-takeaways h2{margin-bottom:12px}
+.article-takeaways ul{margin:0;padding-left:22px;line-height:1.8}
+.article-takeaways li+li{margin-top:7px}
+.article-resource-list,.article-source-list{padding-left:22px;line-height:1.8}
+.article-resource-list li+li,.article-source-list li+li{margin-top:8px}
+.article-resource-list a,.article-source-list a{color:var(--teal);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+.article-source-list li span{display:block;color:var(--muted);font-size:12px}
+.article-sources{padding-bottom:8px}
+.article-notice{line-height:1.7}
+@media(max-width:650px){.article-content-section{margin-top:30px}.article-author-bio{font-size:12px}.article-takeaways{padding:18px}.article-source-list,.article-resource-list{padding-left:20px}}

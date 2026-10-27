@@ -1,4 +1,168 @@
-import Link from 'next/link';import {notFound} from 'next/navigation';import type {Metadata} from 'next';import {lessons} from '../../../lib/data';import {Icon} from '../../../components/icon';import {StructuredData} from '../../../components/structured-data';import {FINANCIAL_EDUCATION_DISCLAIMER, FOUNDER_ID, ORGANIZATION_ID, pageMetadata, SITE_URL} from '../../../lib/seo';
-export function generateStaticParams(){return lessons.map(l=>({slug:l.slug}))}
-export async function generateMetadata({params}:{params:Promise<{slug:string}>}):Promise<Metadata>{const {slug}=await params;const a=lessons.find(l=>l.slug===slug);return pageMetadata({path:`/articles/${slug}`,title:a?.title||'Article',description:a?.excerpt||'Educational articles about financial risk and decision-making.',type:'article'})}
-export default async function Article({params}:{params:Promise<{slug:string}>}){const {slug}=await params;const a=lessons.find(l=>l.slug===slug);if(!a)notFound();const canonical=`${SITE_URL}/articles/${a.slug}`;const articleStructuredData={'@context':'https://schema.org','@type':'BlogPosting','@id':`${canonical}#article`,url:canonical,mainEntityOfPage:{'@type':'WebPage','@id':canonical},headline:a.title,description:a.excerpt,author:{'@id':FOUNDER_ID},publisher:{'@id':ORGANIZATION_ID}};return <><StructuredData data={articleStructuredData}/><article className="container article-page"><Link href="/articles" className="back-link"><Icon name="arrow" size={15}/> Back to articles</Link><div className="eyebrow"><span className="eyebrow-dot"/>{a.category.toUpperCase()} · {a.read.toUpperCase()} READ</div><h1>{a.title}</h1><p className="article-lede">{a.excerpt}</p><div className="article-byline"><span className="author-avatar">M</span><span>By <a href="https://mariamediannikova.com/" target="_blank" rel="noopener noreferrer">Maria Mediannikova</a><br/><small>Introductory educational material</small></span></div><div className="article-prose"><h2>Quick answer</h2><p>{a.definition}</p><h2>Real-world example</h2><p>{a.example}</p><div className="article-callout"><Icon name="sparkles" size={23}/><div><strong>Risk analyst's mindset</strong><p>{a.takeaway}</p></div></div><h2>Questions to ask yourself</h2><ul><li>What is my goal and what assumptions am I making?</li><li>What could go wrong, and how severe might the consequences be?</li><li>Which options could reduce my exposure without creating bigger problems?</li></ul><h2>Put the idea into practice</h2><p>Reading is only the beginning. Explore an interactive tool to see how your decisions can affect a simulated outcome.</p><Link href="/risk-lab" className="button">Explore Risk Lab <Icon name="arrow" size={17}/></Link><div className="article-notice">{FINANCIAL_EDUCATION_DISCLAIMER}</div></div></article><section className="container related-section"><h2>Keep exploring</h2><div className="related-grid">{lessons.filter(l=>l.slug!==a.slug).slice(0,3).map(l=><Link className="related-link" key={l.slug} href={'/articles/'+l.slug}>{l.title}<Icon name="arrow" size={17}/></Link>)}</div></section></>}
+import Link from 'next/link';
+import {notFound} from 'next/navigation';
+import type {Metadata} from 'next';
+import {lessons, paths} from '../../../lib/data';
+import {Icon} from '../../../components/icon';
+import {StructuredData} from '../../../components/structured-data';
+import {
+  FINANCIAL_EDUCATION_DISCLAIMER,
+  FOUNDER_ID,
+  ORGANIZATION_ID,
+  pageMetadata,
+  SITE_URL,
+} from '../../../lib/seo';
+
+export function generateStaticParams() {
+  return lessons.map(({slug}) => ({slug}));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{slug: string}>;
+}): Promise<Metadata> {
+  const {slug} = await params;
+  const article = lessons.find((lesson) => lesson.slug === slug);
+
+  return pageMetadata({
+    path: `/articles/${slug}`,
+    title: article?.title || 'Article',
+    description:
+      article?.excerpt || 'Educational articles about financial risk and decision-making.',
+    type: 'article',
+  });
+}
+
+export default async function Article({
+  params,
+}: {
+  params: Promise<{slug: string}>;
+}) {
+  const {slug} = await params;
+  const article = lessons.find((lesson) => lesson.slug === slug);
+
+  if (!article) notFound();
+
+  const canonical = `${SITE_URL}/articles/${article.slug}`;
+  const relatedArticles = article.relatedArticles
+    .map((relatedSlug) => lessons.find((lesson) => lesson.slug === relatedSlug))
+    .filter((lesson): lesson is (typeof lessons)[number] => Boolean(lesson));
+  const learningPaths = article.learningPaths
+    .map((pathSlug) => paths.find((path) => path.slug === pathSlug))
+    .filter((path): path is (typeof paths)[number] => Boolean(path));
+  const articleStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    '@id': `${canonical}#article`,
+    url: canonical,
+    mainEntityOfPage: {'@type': 'WebPage', '@id': canonical},
+    headline: article.title,
+    description: article.excerpt,
+    articleSection: article.category,
+    inLanguage: 'en',
+    author: {'@id': FOUNDER_ID},
+    publisher: {'@id': ORGANIZATION_ID},
+  };
+
+  return (
+    <>
+      <StructuredData data={articleStructuredData} />
+      <article className="container article-page">
+        <Link href="/articles" className="back-link">
+          <Icon name="arrow" size={15} /> Back to articles
+        </Link>
+        <div className="eyebrow">
+          <span className="eyebrow-dot" />
+          {article.category.toUpperCase()} · {article.read.toUpperCase()} READ
+        </div>
+        <h1>{article.title}</h1>
+        <p className="article-lede">{article.excerpt}</p>
+        <div className="article-byline">
+          <span className="author-avatar">M</span>
+          <div>
+            <strong>
+              By{' '}
+              <a
+                href="https://mariamediannikova.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Maria Mediannikova
+              </a>
+            </strong>
+            <p className="article-author-bio">
+              Maria Mediannikova is a student and the founder of AltRisk Academy and the Financial
+              Literacy Club. Her educational projects focus on financial literacy, risk awareness,
+              and practical decision-making.
+            </p>
+          </div>
+        </div>
+
+        <div className="article-prose">
+          <p>{article.introduction}</p>
+          {article.sections.map((section) => (
+            <section className="article-content-section" key={section.heading}>
+              <h2>{section.heading}</h2>
+              {section.paragraphs.map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </section>
+          ))}
+          <section className="article-content-section">
+            <h2>{article.example.heading}</h2>
+            {article.example.paragraphs.map((paragraph) => (
+              <p key={paragraph}>{paragraph}</p>
+            ))}
+          </section>
+
+          <section className="article-callout article-takeaways" aria-labelledby="key-takeaways">
+            <Icon name="sparkles" size={23} />
+            <div>
+              <h2 id="key-takeaways">Key takeaways</h2>
+              <ul>
+                {article.keyTakeaways.map((takeaway) => (
+                  <li key={takeaway}>{takeaway}</li>
+                ))}
+              </ul>
+            </div>
+          </section>
+
+          <section className="article-content-section article-resources">
+            <h2>Related learning resources</h2>
+            <ul className="article-resource-list">
+              {relatedArticles.map((related) => (
+                <li key={related.slug}>
+                  <Link href={`/articles/${related.slug}`}>{related.title}</Link>
+                </li>
+              ))}
+              {learningPaths.map((path) => (
+                <li key={path.slug}>
+                  <Link href={`/learn/${path.slug}`}>{path.title} learning path</Link>
+                </li>
+              ))}
+              <li>
+                <Link href="/risk-lab">Explore the interactive Risk Lab</Link>
+              </li>
+            </ul>
+          </section>
+
+          <section className="article-content-section article-sources">
+            <h2>Sources &amp; Further Reading</h2>
+            <ul className="article-source-list">
+              {article.sources.map((source) => (
+                <li key={source.url}>
+                  <a href={source.url} target="_blank" rel="noopener noreferrer">
+                    {source.title}
+                  </a>
+                  <span>{source.publisher}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <p className="article-notice">{FINANCIAL_EDUCATION_DISCLAIMER}</p>
+        </div>
+      </article>
+    </>
+  );
+}
