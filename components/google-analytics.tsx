@@ -1,21 +1,41 @@
 'use client';
 
-import {useEffect, useState} from 'react';
-import {GoogleAnalytics} from '@next/third-parties/google';
+import Script from 'next/script';
+import {usePathname} from 'next/navigation';
+import {useEffect, useRef, useState} from 'react';
 
-const measurementId = 'G-56KG7JRY77';
+const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
+const measurementId = configuredMeasurementId || 'G-56KG7JRY77';
+const isValidMeasurementId = /^G-[A-Z0-9]+$/.test(measurementId);
+
 export const analyticsConsentStorageKey = 'altrisk-analytics-consent';
 export const analyticsConsentEvent = 'altrisk-analytics-consent';
 
 declare global {
   interface Window {
-    'ga-disable-G-56KG7JRY77'?: boolean;
+    [key: `ga-disable-${string}`]: boolean | undefined;
+    dataLayer?: IArguments[];
     gtag?: (...args: [string, ...unknown[]]) => void;
+  }
+}
+
+export function setGoogleAnalyticsDisabled(disabled: boolean) {
+  if (isValidMeasurementId) {
+    window[`ga-disable-${measurementId}`] = disabled;
   }
 }
 
 export function ConsentAwareGoogleAnalytics() {
   const [hasConsent, setHasConsent] = useState(false);
+  const [scriptReady, setScriptReady] = useState(false);
+  const pathname = usePathname();
+  const lastTrackedPath = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (configuredMeasurementId && !isValidMeasurementId) {
+      console.error('Invalid NEXT_PUBLIC_GA_MEASUREMENT_ID; analytics remains disabled.');
+    }
+  }, []);
 
   useEffect(() => {
     const syncConsent = () => {
@@ -27,19 +47,7 @@ export function ConsentAwareGoogleAnalytics() {
         console.error('Unable to read analytics consent; analytics remains disabled.', error);
       }
 
-      window['ga-disable-G-56KG7JRY77'] = !consentGranted;
-
-      if (consentGranted) {
-        window.dataLayer = window.dataLayer || [];
-        window.gtag = window.gtag || function gtag() {
-          window.dataLayer?.push(arguments);
-        };
-        window.gtag('set', {
-          allow_google_signals: false,
-          allow_ad_personalization_signals: false,
-        });
-      }
-
+      setGoogleAnalyticsDisabled(!consentGranted);
       setHasConsent(consentGranted);
     };
 
@@ -53,9 +61,51 @@ export function ConsentAwareGoogleAnalytics() {
     };
   }, []);
 
-  if (process.env.NODE_ENV !== 'production' || !hasConsent) {
+  useEffect(() => {
+    if (!hasConsent) {
+      return;
+    }
+
+    if (!scriptReady || !pathname || lastTrackedPath.current === pathname) {
+      return;
+    }
+
+    window.gtag?.('event', 'page_view', {
+      page_location: window.location.href,
+      page_path: pathname,
+      page_title: document.title,
+    });
+    lastTrackedPath.current = pathname;
+  }, [hasConsent, pathname, scriptReady]);
+
+  if (process.env.NODE_ENV !== 'production' || !isValidMeasurementId || !hasConsent) {
     return null;
   }
 
-  return <GoogleAnalytics gaId={measurementId} />;
+  return (
+    <>
+      <Script
+        id="altrisk-ga-init"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            window.gtag = window.gtag || function(){window.dataLayer.push(arguments);};
+            window.gtag('js', new Date());
+            window.gtag('set', {
+              allow_google_signals: false,
+              allow_ad_personalization_signals: false,
+            });
+            window.gtag('config', '${measurementId}', {send_page_view: false});
+          `,
+        }}
+      />
+      <Script
+        id="altrisk-ga-script"
+        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+        strategy="afterInteractive"
+        onReady={() => setScriptReady(true)}
+      />
+    </>
+  );
 }

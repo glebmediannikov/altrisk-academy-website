@@ -4,15 +4,10 @@ import {useEffect, useRef, useState} from 'react';
 import {
   analyticsConsentEvent,
   analyticsConsentStorageKey,
+  setGoogleAnalyticsDisabled,
 } from './google-analytics';
 
 type ConsentChoice = 'granted' | 'denied' | null;
-
-declare global {
-  interface Window {
-    'ga-disable-G-56KG7JRY77'?: boolean;
-  }
-}
 
 const openSettingsEvent = 'altrisk-open-privacy-settings';
 
@@ -97,7 +92,7 @@ export function PrivacyConsentBanner() {
       return;
     }
 
-    window['ga-disable-G-56KG7JRY77'] = nextChoice !== 'granted';
+    setGoogleAnalyticsDisabled(nextChoice !== 'granted');
     if (nextChoice === 'denied') {
       clearGoogleAnalyticsCookies();
     }
