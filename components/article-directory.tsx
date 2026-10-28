@@ -39,6 +39,7 @@ export function ArticleDirectory({articles}: {articles: Article[]}) {
       <p className="article-result-count" aria-live="polite">
         Showing {filteredArticles.length} {filteredArticles.length === 1 ? 'article' : 'articles'}
       </p>
+      <h2 className="visually-hidden">All articles</h2>
       <div className="article-grid">
         {filteredArticles.map((article, index) => (
           <Link className="article-card" href={`/articles/${article.slug}`} key={article.slug}>
@@ -50,6 +51,7 @@ export function ArticleDirectory({articles}: {articles: Article[]}) {
                   width={1600}
                   height={900}
                   sizes="(max-width: 650px) 100vw, 33vw"
+                  priority={index === 0}
                   unoptimized
                 />
               </div>

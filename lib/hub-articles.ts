@@ -1,4 +1,5 @@
 import {batchTwoArticles} from './batch-two-articles';
+import {enhanceArticle} from './article-editorial';
 
 export type Article = {
   slug: string;
@@ -15,8 +16,10 @@ export type Article = {
   sources: {title: string; publisher: string; url: string}[];
   seoTitle?: string;
   seoDescription?: string;
+  directAnswer?: string;
   coverImage?: {src: string; alt: string; caption: string};
   illustrations?: {src: string; alt: string; caption: string; afterSection?: string}[];
+  faqs?: {question: string; answer: string}[];
 };
 
 const firstEditorialBatch: Article[] = [
@@ -509,4 +512,6 @@ const firstEditorialBatch: Article[] = [
   },
 ];
 
-export const hubArticles: Article[] = [...firstEditorialBatch, ...batchTwoArticles];
+export const hubArticles: Article[] = [...firstEditorialBatch, ...batchTwoArticles].map(
+  enhanceArticle,
+);

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Hypothetical five-day price paths</title><desc id="desc">Investment A has hypothetical closing values 100, 102, 98, 101, 100. Investment B has values 100, 105, 95, 103, 100. Both start and end at 100, while B has larger interim moves.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6fafb"/><text x="55" y="62" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#147d92">HYPOTHETICAL FIVE-OBSERVATION PRICE PATHS</text>
+  <path d="M125 480H1080M125 170V480" stroke="#9bb0ba" stroke-width="3"/>
+  <path d="M150 360 365 300 580 420 795 330 1010 360" fill="none" stroke="#147d92" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M150 360 365 225 580 495 795 285 1010 360" fill="none" stroke="#d07855" stroke-width="7" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#147d92"><circle cx="150" cy="360" r="8"/><circle cx="365" cy="300" r="8"/><circle cx="580" cy="420" r="8"/><circle cx="795" cy="330" r="8"/><circle cx="1010" cy="360" r="8"/></g>
+  <g fill="#d07855"><circle cx="150" cy="360" r="5"/><circle cx="365" cy="225" r="8"/><circle cx="580" cy="495" r="8"/><circle cx="795" cy="285" r="8"/><circle cx="1010" cy="360" r="8"/></g>
+  <g font-family="Arial,sans-serif" fill="#52697b" font-size="16"><text x="139" y="520">Day 1</text><text x="354" y="520">Day 2</text><text x="569" y="520">Day 3</text><text x="784" y="520">Day 4</text><text x="999" y="520">Day 5</text></g>
+  <g font-family="Arial,sans-serif"><text x="150" y="565" fill="#147d92" font-size="17" font-weight="700">A: $100 · $102 · $98 · $101 · $100</text><text x="150" y="596" fill="#a8573d" font-size="17" font-weight="700">B: $100 · $105 · $95 · $103 · $100</text><text x="150" y="636" fill="#52697b" font-size="15">Both total changes: 0%. Five observations do not estimate future volatility.</text></g>
+</svg>

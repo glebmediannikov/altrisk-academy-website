@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Hypothetical limit utilization alert</title><desc id="desc">A fictional 75,000-dollar exposure against a 100,000-dollar internal limit equals 75 percent utilization, below an illustrative 80 percent warning level.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6fafb"/><text x="55" y="65" font-family="Arial,sans-serif" font-size="22" font-weight="700" letter-spacing="2" fill="#147d92">HYPOTHETICAL DASHBOARD MEASURE</text>
+  <text x="105" y="172" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#10233f">EXPOSURE UTILIZATION</text><text x="105" y="215" font-family="Arial,sans-serif" font-size="17" fill="#52697b">$75,000 ÷ $100,000 = 75%</text>
+  <rect x="105" y="270" width="990" height="72" rx="24" fill="#dce8eb"/><rect x="105" y="270" width="742.5" height="72" rx="24" fill="#28a99f"/><path d="M897 245V370" stroke="#d07855" stroke-width="5" stroke-dasharray="10 7"/>
+  <g font-family="Arial,sans-serif" fill="#52697b" font-size="17"><text x="100" y="400">0%</text><text x="455" y="400">50%</text><text x="824" y="400">75%</text><text x="870" y="400" fill="#a8573d">80% warning</text><text x="1065" y="400">100%</text></g>
+  <rect x="105" y="465" width="990" height="95" rx="18" fill="#e7eef6"/><text x="140" y="507" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#10233f">The alert is useful only if the metric, refresh time, owner, and next step are clear.</text><text x="140" y="537" font-family="Arial,sans-serif" font-size="16" fill="#52697b">Illustrative internal thresholds, not regulatory limits or actual firm data.</text>
+</svg>

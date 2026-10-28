@@ -5,7 +5,7 @@ import {PrivacyConsentBanner} from '../components/privacy-consent';
 import {ConsentAwareGoogleAnalytics} from '../components/google-analytics';
 import {SiteHeader} from '../components/site-header';
 import {StructuredData} from '../components/structured-data';
-import {FOUNDER_ID, ORGANIZATION_ID, SITE_URL} from '../lib/seo';
+import {FOUNDER_ID, FOUNDER_URL, ORGANIZATION_ID, SITE_URL, WEBSITE_ID} from '../lib/seo';
 
 const logoUrl = `${SITE_URL}/branding/altrisk-academy-logo.png`;
 
@@ -32,6 +32,12 @@ export const metadata: Metadata = {
       },
     ],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'AltRisk Academy',
+    description: 'Understand risk. Make smarter decisions. Build a resilient future.',
+    images: [{url: logoUrl, alt: 'AltRisk Academy logo'}],
+  },
   robots: {index: true, follow: true},
 };
 
@@ -54,10 +60,20 @@ const siteStructuredData = {
     },
     {
       '@type': 'WebSite',
-      '@id': `${SITE_URL}/#website`,
+      '@id': WEBSITE_ID,
       name: 'AltRisk Academy',
       url: `${SITE_URL}/`,
       publisher: {'@id': ORGANIZATION_ID},
+    },
+    {
+      '@type': 'Person',
+      '@id': FOUNDER_ID,
+      name: 'Maria Mediannikova',
+      url: FOUNDER_URL,
+      jobTitle: 'Founder, AltRisk Academy',
+      description:
+        'A student and founder of AltRisk Academy whose educational work focuses on financial literacy, risk awareness, and practical decision-making.',
+      worksFor: {'@id': ORGANIZATION_ID},
     },
   ],
 };

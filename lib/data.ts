@@ -1,4 +1,5 @@
 import {hubArticles, type Article} from './hub-articles';
+import {enhanceArticle} from './article-editorial';
 
 export const APP_ACADEMY = 'https://altrisk-academy.streamlit.app/';
 export const APP_CALCULATOR = 'https://altrisk.streamlit.app/';
@@ -10,7 +11,7 @@ export const paths = [
   {slug:'everyday-risk',title:'Everyday Risk & Decisions',category:'Everyday Risk',desc:'Practice making thoughtful decisions when life does not go according to plan.',icon:'compass',level:'Beginner',lessons:7,soon:true},
   {slug:'global-risk',title:'Global & Emerging Risks',category:'Global Risk',desc:'Explore the impact of economic, climate, and technological uncertainty.',icon:'globe',level:'Intermediate',lessons:5,soon:true}
 ];
-export const lessons: Article[] = [
+const foundationalArticles: Article[] = [
  {
   slug:'what-is-risk',title:'What Is Risk?',category:'Foundations',read:'5 min',
   excerpt:'Learn how risk connects uncertain outcomes, possible consequences, and the goals that matter to you.',
@@ -215,6 +216,9 @@ export const lessons: Article[] = [
    {title:'Asset Allocation and Diversification',publisher:'FINRA',url:'https://www.finra.org/investors/investing/investing-basics/asset-allocation-diversification'}
   ]
  },
+];
+export const lessons: Article[] = [
+ ...foundationalArticles.map(enhanceArticle),
  ...hubArticles
 ];
 export const dictionary = [

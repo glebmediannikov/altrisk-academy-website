@@ -1,7 +1,8 @@
 import type {MetadataRoute} from 'next';
 import {lessons, paths} from '../lib/data';
+import {SITE_URL} from '../lib/seo';
 
-const siteUrl = 'https://altriskacademy.com';
+const siteUrl = SITE_URL;
 const staticRoutes = [
   '/',
   '/learn',

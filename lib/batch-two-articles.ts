@@ -351,7 +351,7 @@ export const batchTwoArticles: Article[] = [
       {
         title: 'CME Group Rulebooks',
         publisher: 'CME Group',
-        url: 'https://www.cmegroup.com/market-regulation/rulebook.html',
+        url: 'https://www.cmegroup.com/rulebook/CME/',
       },
     ],
   },

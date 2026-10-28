@@ -8,9 +8,11 @@ import {StructuredData} from '../../../components/structured-data';
 import {
   FINANCIAL_EDUCATION_DISCLAIMER,
   FOUNDER_ID,
+  FOUNDER_URL,
   ORGANIZATION_ID,
   pageMetadata,
   SITE_URL,
+  WEBSITE_ID,
 } from '../../../lib/seo';
 
 export function generateStaticParams() {
@@ -41,6 +43,12 @@ export async function generateMetadata({
           alt: article.coverImage.alt,
         }
       : undefined,
+    article: article
+      ? {
+          authors: [FOUNDER_URL],
+          section: article.category,
+        }
+      : undefined,
   });
 }
 
@@ -63,26 +71,83 @@ export default async function Article({
     .filter((path): path is (typeof paths)[number] => Boolean(path));
   const articleStructuredData = {
     '@context': 'https://schema.org',
-    '@type': 'BlogPosting',
-    '@id': `${canonical}#article`,
-    url: canonical,
-    mainEntityOfPage: {'@type': 'WebPage', '@id': canonical},
-    headline: article.title,
-    description: article.excerpt,
-    articleSection: article.category,
-    image: article.coverImage ? [`${SITE_URL}${article.coverImage.src}`] : undefined,
-    inLanguage: 'en',
-    author: {'@id': FOUNDER_ID},
-    publisher: {'@id': ORGANIZATION_ID},
+    '@graph': [
+      {
+        '@type': 'WebPage',
+        '@id': `${canonical}#webpage`,
+        url: canonical,
+        name: article.title,
+        description: article.seoDescription || article.excerpt,
+        inLanguage: 'en-US',
+        isPartOf: {'@id': WEBSITE_ID},
+        breadcrumb: {'@id': `${canonical}#breadcrumb`},
+        primaryImageOfPage: article.coverImage
+          ? {'@id': `${canonical}#primaryimage`}
+          : undefined,
+        mainEntity: {'@id': `${canonical}#article`},
+      },
+      {
+        '@type': 'BlogPosting',
+        '@id': `${canonical}#article`,
+        url: canonical,
+        mainEntityOfPage: {'@type': 'WebPage', '@id': `${canonical}#webpage`},
+        isPartOf: {'@id': WEBSITE_ID},
+        headline: article.title,
+        description: article.seoDescription || article.excerpt,
+        articleSection: article.category,
+        image: article.coverImage
+          ? {
+              '@type': 'ImageObject',
+              '@id': `${canonical}#primaryimage`,
+              url: `${SITE_URL}${article.coverImage.src}`,
+              contentUrl: `${SITE_URL}${article.coverImage.src}`,
+              width: 1600,
+              height: 900,
+              caption: article.coverImage.caption,
+            }
+          : undefined,
+        inLanguage: 'en-US',
+        author: {'@id': FOUNDER_ID},
+        publisher: {'@id': ORGANIZATION_ID},
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${canonical}#breadcrumb`,
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: 'Home',
+            item: `${SITE_URL}/`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: 'Articles',
+            item: `${SITE_URL}/articles`,
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: article.title,
+            item: canonical,
+          },
+        ],
+      },
+    ],
   };
 
   return (
     <>
       <StructuredData data={articleStructuredData} />
       <article className="container article-page">
-        <Link href="/articles" className="back-link">
-          <Icon name="arrow" size={15} /> Back to articles
-        </Link>
+        <nav className="article-breadcrumbs" aria-label="Breadcrumb">
+          <ol>
+            <li><Link href="/">Home</Link></li>
+            <li><Link href="/articles">Articles</Link></li>
+            <li aria-current="page">{article.title}</li>
+          </ol>
+        </nav>
         <div className="eyebrow">
           <span className="eyebrow-dot" />
           {article.category.toUpperCase()} · {article.read.toUpperCase()} READ
@@ -95,12 +160,13 @@ export default async function Article({
             <strong>
               By{' '}
               <a
-                href="https://mariamediannikova.com/"
+                href={FOUNDER_URL}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Maria Mediannikova
               </a>
+              <span className="article-author-role"> · Founder, AltRisk Academy</span>
             </strong>
             <p className="article-author-bio">
               Maria Mediannikova is a student and the founder of AltRisk Academy. Her educational
@@ -110,7 +176,11 @@ export default async function Article({
         </div>
 
         <div className="article-prose">
-          <p>{article.introduction}</p>
+          <section className="article-answer" aria-labelledby="article-answer-heading">
+            <h2 id="article-answer-heading">In brief</h2>
+            <p>{article.directAnswer || article.introduction}</p>
+          </section>
+          <p className="article-introduction">{article.introduction}</p>
           {article.coverImage && (
             <figure className="article-figure article-cover-figure">
               <Image
@@ -171,6 +241,18 @@ export default async function Article({
               </ul>
             </div>
           </section>
+
+          {article.faqs && article.faqs.length > 0 && (
+            <section className="article-content-section article-faq" aria-labelledby="article-faq">
+              <h2 id="article-faq">Frequently asked questions</h2>
+              {article.faqs.map((faq) => (
+                <div className="article-faq-item" key={faq.question}>
+                  <h3>{faq.question}</h3>
+                  <p>{faq.answer}</p>
+                </div>
+              ))}
+            </section>
+          )}
 
           <section className="article-content-section article-resources">
             <h2>Related learning resources</h2>
