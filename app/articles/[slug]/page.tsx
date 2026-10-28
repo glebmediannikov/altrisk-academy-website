@@ -91,9 +91,8 @@ export default async function Article({
               </a>
             </strong>
             <p className="article-author-bio">
-              Maria Mediannikova is a student and the founder of AltRisk Academy and the Financial
-              Literacy Club. Her educational projects focus on financial literacy, risk awareness,
-              and practical decision-making.
+              Maria Mediannikova is a student and the founder of AltRisk Academy. Her educational
+              work focuses on financial literacy, risk awareness, and practical decision-making.
             </p>
           </div>
         </div>

@@ -87,4 +87,10 @@ a:focus-visible,button:focus-visible,input:focus-visible { outline:3px solid #13
 .article-source-list li span{display:block;color:var(--muted);font-size:12px}
 .article-sources{padding-bottom:8px}
 .article-notice{line-height:1.7}
+.article-filters{display:flex;flex-wrap:wrap;gap:9px;margin:0 0 16px}
+.article-filter{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:8px 13px;border:1px solid #d5e0e8;border-radius:999px;background:#fff;color:var(--navy);font:inherit;font-size:13px;font-weight:700;cursor:pointer}
+.article-filter[aria-pressed=true]{border-color:var(--teal);background:#eaf7f6;color:#105f6e}
+.article-filter span{min-width:21px;padding:2px 6px;border-radius:999px;background:#eef2f5;color:#516779;text-align:center;font-size:11px}
+.article-result-count{margin:0 0 15px;color:var(--muted);font-size:13px}
+.article-filter:focus-visible{outline:3px solid var(--tealbright);outline-offset:3px}
 @media(max-width:650px){.article-content-section{margin-top:30px}.article-author-bio{font-size:12px}.article-takeaways{padding:18px}.article-source-list,.article-resource-list{padding-left:20px}}
