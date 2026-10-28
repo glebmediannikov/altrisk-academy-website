@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Hypothetical one-year outcome range</title>
+  <desc id="desc">A 100,000-dollar starting value and a one-period arithmetic-return assumption of 5 percent mean and 15 percent volatility gives an approximate 90 percent range from 80,325 to 129,675 dollars.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6fafb"/>
+  <text x="56" y="66" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="2" fill="#147d92">HYPOTHETICAL ONE-PERIOD FAN</text>
+  <text x="56" y="107" font-family="Arial,sans-serif" font-size="20" fill="#52697b">Starting value $100,000 · mean return 5% · volatility 15%</text>
+  <path d="M150 495 1000 260 1000 445z" fill="#d9efec"/>
+  <path d="M150 495 1000 350" fill="none" stroke="#147d92" stroke-width="7"/>
+  <path d="M150 495 1000 260M150 495 1000 445" fill="none" stroke="#83bdb8" stroke-width="4" stroke-dasharray="10 8"/>
+  <path d="M150 530H1060M150 530V180" fill="none" stroke="#8298a7" stroke-width="3"/>
+  <circle cx="150" cy="495" r="12" fill="#10233f"/>
+  <circle cx="1000" cy="350" r="12" fill="#147d92"/>
+  <g font-family="Arial,sans-serif" fill="#10233f">
+    <text x="94" y="570" font-size="18">Start</text>
+    <text x="935" y="570" font-size="18">1 year</text>
+    <text x="800" y="237" font-size="18" font-weight="700">$129,675</text>
+    <text x="820" y="340" font-size="18" font-weight="700">$105,000 center</text>
+    <text x="800" y="468" font-size="18" font-weight="700">$80,325</text>
+  </g>
+  <rect x="175" y="595" width="850" height="42" rx="12" fill="#e7eef6"/>
+  <text x="600" y="623" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#344e63">Approximate 90% interval: $100,000 × [1 + (5% ± 1.645 × 15%)].</text>
+</svg>

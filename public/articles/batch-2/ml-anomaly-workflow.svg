@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Governed anomaly detection workflow</title>
+  <desc id="desc">Data quality and feature preparation lead to model scoring, human review, escalation where appropriate, and monitoring for changes.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6fafb"/>
+  <text x="56" y="66" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="2" fill="#147d92">ANOMALY DETECTION IS A REVIEW LOOP</text>
+  <path d="M155 286H1035" stroke="#bfd7dc" stroke-width="7" stroke-linecap="round"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <g><rect x="65" y="205" width="180" height="158" rx="18" fill="#10233f"/><text x="155" y="263" font-size="18" font-weight="700" fill="#fff">DATA</text><text x="155" y="294" font-size="15" fill="#c4e7e5">quality + access</text><text x="155" y="325" font-size="15" fill="#c4e7e5">checks</text></g>
+    <g><rect x="285" y="205" width="180" height="158" rx="18" fill="#fff" stroke="#bfd4dc" stroke-width="3"/><text x="375" y="263" font-size="18" font-weight="700" fill="#10233f">FEATURES</text><text x="375" y="294" font-size="15" fill="#52697b">context +</text><text x="375" y="325" font-size="15" fill="#52697b">baseline</text></g>
+    <g><rect x="505" y="205" width="180" height="158" rx="18" fill="#10233f"/><text x="595" y="263" font-size="18" font-weight="700" fill="#fff">SCORE</text><text x="595" y="294" font-size="15" fill="#c4e7e5">threshold +</text><text x="595" y="325" font-size="15" fill="#c4e7e5">alert record</text></g>
+    <g><rect x="725" y="205" width="180" height="158" rx="18" fill="#e2f5ef" stroke="#a8d8ca" stroke-width="3"/><text x="815" y="263" font-size="18" font-weight="700" fill="#147d92">HUMAN REVIEW</text><text x="815" y="294" font-size="15" fill="#52697b">evidence +</text><text x="815" y="325" font-size="15" fill="#52697b">decision</text></g>
+    <g><rect x="945" y="205" width="190" height="158" rx="18" fill="#10233f"/><text x="1040" y="263" font-size="18" font-weight="700" fill="#fff">MONITOR</text><text x="1040" y="294" font-size="15" fill="#c4e7e5">outcomes +</text><text x="1040" y="325" font-size="15" fill="#c4e7e5">data drift</text></g>
+  </g>
+  <g fill="#147d92"><path d="m254 277 19 9-19 9z"/><path d="m474 277 19 9-19 9z"/><path d="m694 277 19 9-19 9z"/><path d="m914 277 19 9-19 9z"/></g>
+  <path d="M1040 390v96H595v-96" fill="none" stroke="#8eb8bc" stroke-width="4" stroke-dasharray="10 8"/>
+  <rect x="380" y="465" width="430" height="80" rx="18" fill="#e7eef6"/>
+  <text x="595" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" font-weight="700" fill="#10233f">Review findings inform future testing</text>
+  <text x="595" y="526" text-anchor="middle" font-family="Arial,sans-serif" font-size="15" fill="#52697b">Keep model outputs separate from confirmed outcomes.</text>
+  <text x="600" y="610" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#52697b">A score prioritizes attention; context and accountable review determine action.</text>
+</svg>

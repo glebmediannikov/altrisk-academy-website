@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Layered electronic order control workflow</title>
+  <desc id="desc">Order submission is checked for identity, size, price, and exposure; it is approved or rejected, then monitored for unusual activity and stopped if needed.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6fafb"/>
+  <text x="55" y="66" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="2" fill="#147d92">ILLUSTRATIVE CONTROL FLOW</text>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <rect x="55" y="235" width="180" height="112" rx="18" fill="#10233f"/>
+    <text x="145" y="281" font-size="19" font-weight="700" fill="#fff">Order</text>
+    <text x="145" y="311" font-size="16" fill="#c4e7e5">submitted</text>
+    <rect x="275" y="205" width="245" height="172" rx="18" fill="#fff" stroke="#bfd4dc" stroke-width="3"/>
+    <text x="397" y="250" font-size="20" font-weight="700" fill="#10233f">PRE-TRADE CHECKS</text>
+    <text x="397" y="288" font-size="16" fill="#52697b">Identity · size</text>
+    <text x="397" y="318" font-size="16" fill="#52697b">Price · exposure</text>
+    <path d="M235 291h40m245 0h46" stroke="#147d92" stroke-width="6" stroke-linecap="round"/><path d="m556 275 25 16-25 16z" fill="#147d92"/>
+    <path d="M590 291v-102h45M590 291v102h45" fill="none" stroke="#91afb9" stroke-width="5"/>
+    <rect x="635" y="125" width="170" height="94" rx="18" fill="#e2f5ef" stroke="#a8d8ca" stroke-width="3"/>
+    <text x="720" y="181" font-size="19" font-weight="700" fill="#147d92">APPROVE</text>
+    <rect x="635" y="356" width="170" height="94" rx="18" fill="#fff0ed" stroke="#e5c4bc" stroke-width="3"/>
+    <text x="720" y="412" font-size="19" font-weight="700" fill="#9d5145">REJECT + LOG</text>
+    <path d="M805 172h64v119" fill="none" stroke="#147d92" stroke-width="5"/>
+    <rect x="869" y="235" width="265" height="112" rx="18" fill="#10233f"/>
+    <text x="1001" y="281" font-size="19" font-weight="700" fill="#fff">MONITOR</text>
+    <text x="1001" y="311" font-size="16" fill="#c4e7e5">Orders · positions · system</text>
+    <path d="M1001 347v90h-97" fill="none" stroke="#147d92" stroke-width="5" stroke-dasharray="9 8"/>
+    <rect x="724" y="402" width="180" height="85" rx="18" fill="#e8eef5" stroke="#c9d6e0" stroke-width="3"/>
+    <text x="814" y="454" font-size="18" font-weight="700" fill="#10233f">STOP / ESCALATE</text>
+  </g>
+  <rect x="92" y="535" width="1016" height="62" rx="14" fill="#e7eef6"/>
+  <text x="600" y="574" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#344e63">Thresholds, control ownership, and legal obligations are specific to the firm and market.</text>
+</svg>

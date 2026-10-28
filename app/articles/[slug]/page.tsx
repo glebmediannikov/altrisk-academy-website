@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import {notFound} from 'next/navigation';
 import type {Metadata} from 'next';
 import {lessons, paths} from '../../../lib/data';
@@ -26,10 +27,20 @@ export async function generateMetadata({
 
   return pageMetadata({
     path: `/articles/${slug}`,
-    title: article?.title || 'Article',
+    title: article?.seoTitle || article?.title || 'Article',
     description:
-      article?.excerpt || 'Educational articles about financial risk and decision-making.',
+      article?.seoDescription ||
+      article?.excerpt ||
+      'Educational articles about financial risk and decision-making.',
     type: 'article',
+    image: article?.coverImage
+      ? {
+          url: article.coverImage.src,
+          width: 1600,
+          height: 900,
+          alt: article.coverImage.alt,
+        }
+      : undefined,
   });
 }
 
@@ -59,6 +70,7 @@ export default async function Article({
     headline: article.title,
     description: article.excerpt,
     articleSection: article.category,
+    image: article.coverImage ? [`${SITE_URL}${article.coverImage.src}`] : undefined,
     inLanguage: 'en',
     author: {'@id': FOUNDER_ID},
     publisher: {'@id': ORGANIZATION_ID},
@@ -99,13 +111,47 @@ export default async function Article({
 
         <div className="article-prose">
           <p>{article.introduction}</p>
+          {article.coverImage && (
+            <figure className="article-figure article-cover-figure">
+              <Image
+                src={article.coverImage.src}
+                alt={article.coverImage.alt}
+                width={1600}
+                height={900}
+                sizes="(max-width: 840px) 100vw, 840px"
+                unoptimized
+              />
+              <figcaption>{article.coverImage.caption}</figcaption>
+            </figure>
+          )}
           {article.sections.map((section) => (
-            <section className="article-content-section" key={section.heading}>
-              <h2>{section.heading}</h2>
-              {section.paragraphs.map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
-            </section>
+            <div key={section.heading}>
+              <section className="article-content-section">
+                <h2>{section.heading}</h2>
+                {section.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </section>
+              {article.illustrations
+                ?.filter((illustration) => illustration.afterSection === section.heading)
+                .map((illustration) => (
+                  <figure
+                    className="article-figure article-diagram"
+                    key={illustration.src}
+                    tabIndex={0}
+                  >
+                    <Image
+                      src={illustration.src}
+                      alt={illustration.alt}
+                      width={1200}
+                      height={675}
+                      sizes="(max-width: 960px) 960px, 100vw"
+                      unoptimized
+                    />
+                    <figcaption>{illustration.caption}</figcaption>
+                  </figure>
+                ))}
+            </div>
           ))}
           <section className="article-content-section">
             <h2>{article.example.heading}</h2>

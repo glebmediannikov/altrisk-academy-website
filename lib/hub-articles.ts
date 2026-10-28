@@ -1,3 +1,5 @@
+import {batchTwoArticles} from './batch-two-articles';
+
 export type Article = {
   slug: string;
   title: string;
@@ -11,9 +13,13 @@ export type Article = {
   relatedArticles: string[];
   learningPaths: string[];
   sources: {title: string; publisher: string; url: string}[];
+  seoTitle?: string;
+  seoDescription?: string;
+  coverImage?: {src: string; alt: string; caption: string};
+  illustrations?: {src: string; alt: string; caption: string; afterSection?: string}[];
 };
 
-export const hubArticles: Article[] = [
+const firstEditorialBatch: Article[] = [
   {
     slug: 'what-does-a-risk-manager-do',
     title: 'What Does a Risk Manager Actually Do?',
@@ -502,3 +508,5 @@ export const hubArticles: Article[] = [
     ],
   },
 ];
+
+export const hubArticles: Article[] = [...firstEditorialBatch, ...batchTwoArticles];

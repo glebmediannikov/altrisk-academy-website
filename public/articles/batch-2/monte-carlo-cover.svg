@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Monte Carlo simulation and risk ranges</title>
+  <desc id="desc">A central portfolio path branches into possible outcomes and a distribution with a highlighted tail.</desc>
+  <rect width="1600" height="900" fill="#f6fafb"/>
+  <circle cx="1340" cy="160" r="240" fill="#e4f4f2"/>
+  <circle cx="170" cy="760" r="270" fill="#e7eef6"/>
+  <g fill="none" stroke-linecap="round">
+    <path d="M130 490C370 490 440 490 570 490S750 450 930 365 1200 250 1460 250" stroke="#147d92" stroke-width="8"/>
+    <path d="M570 490C760 520 890 600 1060 665s250 72 390 96" stroke="#7abeb9" stroke-width="6"/>
+    <path d="M570 490c190-68 325-118 470-194s274-119 410-141" stroke="#9cbbc4" stroke-width="5"/>
+    <path d="M570 490c190 96 320 158 450 213s280 112 430 129" stroke="#b3c9cf" stroke-width="5"/>
+    <path d="M570 490c170-110 300-176 430-220s275-60 450-92" stroke="#bfd2d7" stroke-width="4"/>
+    <path d="M570 490c170 32 310 64 440 112s292 76 440 91" stroke="#bfd2d7" stroke-width="4"/>
+  </g>
+  <g fill="#147d92"><circle cx="130" cy="490" r="17"/><circle cx="570" cy="490" r="18"/><circle cx="930" cy="365" r="14"/><circle cx="1460" cy="250" r="17"/></g>
+  <rect x="990" y="420" width="430" height="220" rx="28" fill="#fff" stroke="#d7e5e9" stroke-width="4"/>
+  <path d="M1040 590h320M1060 590c50-12 75-126 145-126s90 126 145 126" fill="none" stroke="#147d92" stroke-width="8" stroke-linecap="round"/>
+  <path d="M1295 590c19-48 38-126 80-126 30 0 49 66 66 126z" fill="#c4e9e3"/>
+  <path d="M1295 460v140" stroke="#10233f" stroke-width="4" stroke-dasharray="9 8"/>
+  <g font-family="Arial,sans-serif">
+    <text x="120" y="140" fill="#147d92" font-size="25" font-weight="700" letter-spacing="4">FINANCIAL RISK ANALYTICS</text>
+    <text x="120" y="205" fill="#10233f" font-size="48" font-weight="700">Many paths. Stated assumptions.</text>
+    <text x="120" y="250" fill="#607587" font-size="24">A simulation explores outcomes; it does not predict one.</text>
+    <text x="1020" y="465" fill="#10233f" font-size="19" font-weight="700">ILLUSTRATIVE LOSS DISTRIBUTION</text>
+    <text x="1038" y="625" fill="#607587" font-size="17">modeled loss</text>
+    <text x="1295" y="445" fill="#10233f" font-size="16">tail threshold</text>
+    <text x="120" y="820" fill="#607587" font-size="18">Possible portfolio values under a hypothetical model</text>
+  </g>
+</svg>

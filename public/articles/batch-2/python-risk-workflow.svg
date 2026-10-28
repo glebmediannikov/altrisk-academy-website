@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">A reviewable risk analytics workflow</title>
+  <desc id="desc">Five connected steps from source data to validation, calculation, independent review, and a decision-ready report.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6fafb"/>
+  <text x="60" y="76" font-family="Arial,sans-serif" font-size="24" font-weight="700" letter-spacing="3" fill="#147d92">ILLUSTRATIVE WORKFLOW</text>
+  <path d="M143 300H1055" stroke="#bdd5dc" stroke-width="8" stroke-linecap="round"/>
+  <g font-family="Arial,sans-serif" text-anchor="middle">
+    <g>
+      <circle cx="145" cy="300" r="76" fill="#10233f"/>
+      <path d="M111 278h68M111 300h53M111 322h60" stroke="#c4e7e5" stroke-width="9" stroke-linecap="round"/>
+      <text x="145" y="425" font-size="22" font-weight="700" fill="#10233f">Source data</text>
+      <text x="145" y="458" font-size="17" fill="#607587">Preserve origin</text>
+    </g>
+    <g>
+      <circle cx="372" cy="300" r="76" fill="#e2f4f1" stroke="#a5d8d1" stroke-width="3"/>
+      <path d="m337 300 24 24 47-52" fill="none" stroke="#147d92" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+      <text x="372" y="425" font-size="22" font-weight="700" fill="#10233f">Validate</text>
+      <text x="372" y="458" font-size="17" fill="#607587">Check gaps and totals</text>
+    </g>
+    <g>
+      <circle cx="600" cy="300" r="76" fill="#10233f"/>
+      <path d="M567 330v-35M600 330v-72M633 330v-52" stroke="#28c5b8" stroke-width="15" stroke-linecap="round"/>
+      <text x="600" y="425" font-size="22" font-weight="700" fill="#10233f">Calculate</text>
+      <text x="600" y="458" font-size="17" fill="#607587">Document assumptions</text>
+    </g>
+    <g>
+      <circle cx="828" cy="300" r="76" fill="#e2f4f1" stroke="#a5d8d1" stroke-width="3"/>
+      <path d="M792 300h72M828 264v72" stroke="#147d92" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="828" cy="300" r="28" fill="none" stroke="#147d92" stroke-width="6"/>
+      <text x="828" y="425" font-size="22" font-weight="700" fill="#10233f">Review</text>
+      <text x="828" y="458" font-size="17" fill="#607587">Reconcile independently</text>
+    </g>
+    <g>
+      <circle cx="1055" cy="300" r="76" fill="#10233f"/>
+      <path d="M1020 328v-32M1048 328v-62M1076 328v-45" stroke="#28c5b8" stroke-width="15" stroke-linecap="round"/>
+      <text x="1055" y="425" font-size="22" font-weight="700" fill="#10233f">Report</text>
+      <text x="1055" y="458" font-size="17" fill="#607587">Show limits and exceptions</text>
+    </g>
+  </g>
+  <g fill="#147d92"><path d="m251 291 17 9-17 9z"/><path d="m478 291 17 9-17 9z"/><path d="m706 291 17 9-17 9z"/><path d="m934 291 17 9-17 9z"/></g>
+  <text x="600" y="575" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#52697b">A completed script is not a substitute for data ownership or human review.</text>
+</svg>

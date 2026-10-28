@@ -8,7 +8,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/articles',
   title: 'Articles & Risk Education Guides',
   description:
-    'Explore practical risk management guides on careers, AI, stress testing, dashboards, market access, and financial decisions.',
+    'Explore practical risk management guides on Python analytics, Monte Carlo simulation, algorithmic trading, liquidity, machine learning, VaR, stress testing, and financial decisions.',
 });
 
 export default function Articles() {

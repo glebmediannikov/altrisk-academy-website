@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Illustrative simulated loss distribution with VaR and expected shortfall</title>
+  <desc id="desc">For a hypothetical one-million-dollar portfolio with zero mean loss and one percent standard deviation, 95 percent VaR is approximately 16,450 dollars and expected shortfall is about 20,630 dollars.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6fafb"/>
+  <text x="56" y="66" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="2" fill="#147d92">HYPOTHETICAL ONE-DAY MODEL</text>
+  <text x="56" y="107" font-family="Arial,sans-serif" font-size="20" fill="#52697b">$1,000,000 portfolio · zero mean loss · 1% standard deviation</text>
+  <path d="M120 510H1080" stroke="#8298a7" stroke-width="3"/>
+  <path d="M120 510C285 508 350 492 410 425s83-216 190-216 145 149 210 216 85 81 153 85 78 0 117 0v0H120z" fill="#e5f4f2"/>
+  <path d="M120 510C285 508 350 492 410 425s83-216 190-216 145 149 210 216 85 81 153 85 78 0 117 0" fill="none" stroke="#147d92" stroke-width="8" stroke-linecap="round"/>
+  <path d="M863 510c18-44 35-112 72-112 34 0 52 64 71 112z" fill="#b9e5df"/>
+  <path d="M863 330V520M930 378V520" stroke="#10233f" stroke-width="4" stroke-dasharray="9 8"/>
+  <g font-family="Arial,sans-serif" fill="#10233f">
+    <text x="825" y="300" font-size="20" font-weight="700">VaR 95% ≈ $16,450</text>
+    <text x="920" y="360" font-size="18" font-weight="700">ES 95% ≈ $20,630</text>
+    <text x="98" y="552" font-size="17" fill="#607587">−$30k</text>
+    <text x="570" y="552" font-size="17" fill="#607587">$0 loss</text>
+    <text x="1015" y="552" font-size="17" fill="#607587">$30k</text>
+  </g>
+  <rect x="120" y="590" width="960" height="48" rx="12" fill="#e7eef6"/>
+  <text x="600" y="621" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#344e63">Normal-loss assumption; analytical benchmarks, not observed simulation results or a forecast.</text>
+</svg>

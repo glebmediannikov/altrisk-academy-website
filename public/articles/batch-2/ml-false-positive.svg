@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="675" viewBox="0 0 1200 675" role="img" aria-labelledby="title desc">
+  <title id="title">Hypothetical anomaly-alert review and false positives</title>
+  <desc id="desc">Of 1,000 hypothetical payments, 20 are flagged. Review confirms eight unusual cases and classifies 12 as benign, so precision is 40 percent.</desc>
+  <rect width="1200" height="675" rx="24" fill="#f6fafb"/>
+  <text x="56" y="66" font-family="Arial,sans-serif" font-size="23" font-weight="700" letter-spacing="2" fill="#147d92">HYPOTHETICAL REVIEW · 1,000 PAYMENTS</text>
+  <g font-family="Arial,sans-serif">
+    <rect x="68" y="165" width="230" height="115" rx="20" fill="#10233f"/>
+    <text x="183" y="211" text-anchor="middle" font-size="18" fill="#c4e7e5">SCREENED</text>
+    <text x="183" y="253" text-anchor="middle" font-size="32" font-weight="700" fill="#fff">1,000</text>
+    <path d="M298 222h60" stroke="#147d92" stroke-width="6" stroke-linecap="round"/><path d="m349 205 27 17-27 17z" fill="#147d92"/>
+    <rect x="380" y="165" width="230" height="115" rx="20" fill="#e7eef6" stroke="#cbd9e1" stroke-width="3"/>
+    <text x="495" y="211" text-anchor="middle" font-size="18" fill="#52697b">FLAGGED</text>
+    <text x="495" y="253" text-anchor="middle" font-size="32" font-weight="700" fill="#10233f">20</text>
+    <path d="M610 222h60" stroke="#147d92" stroke-width="6" stroke-linecap="round"/><path d="m661 205 27 17-27 17z" fill="#147d92"/>
+    <rect x="690" y="125" width="430" height="100" rx="18" fill="#e2f5ef" stroke="#a8d8ca" stroke-width="3"/>
+    <text x="905" y="164" text-anchor="middle" font-size="18" fill="#52697b">CONFIRMED UNUSUAL</text>
+    <text x="905" y="202" text-anchor="middle" font-size="30" font-weight="700" fill="#147d92">8</text>
+    <rect x="690" y="250" width="430" height="100" rx="18" fill="#fff0ed" stroke="#e5c4bc" stroke-width="3"/>
+    <text x="905" y="289" text-anchor="middle" font-size="18" fill="#52697b">BENIGN FALSE POSITIVES</text>
+    <text x="905" y="327" text-anchor="middle" font-size="30" font-weight="700" fill="#9d5145">12</text>
+  </g>
+  <rect x="140" y="410" width="920" height="105" rx="20" fill="#fff" stroke="#d7e5e9" stroke-width="3"/>
+  <text x="600" y="453" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" font-weight="700" fill="#10233f">Precision among alerts = confirmed ÷ flagged</text>
+  <text x="600" y="490" text-anchor="middle" font-family="Arial,sans-serif" font-size="24" font-weight="700" fill="#147d92">8 ÷ 20 = 40%</text>
+  <text x="600" y="575" text-anchor="middle" font-family="Arial,sans-serif" font-size="17" fill="#52697b">Recall cannot be calculated without knowing how many relevant events were missed.</text>
+</svg>

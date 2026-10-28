@@ -11,11 +11,13 @@ export function pageMetadata({
   title,
   description,
   type = 'website',
+  image,
 }: {
   path: string;
   title: string;
   description: string;
   type?: 'website' | 'article';
+  image?: {url: string; width: number; height: number; alt: string};
 }): Metadata {
   const canonical = new URL(path, SITE_URL).toString();
   return {
@@ -29,7 +31,7 @@ export function pageMetadata({
       siteName: 'AltRisk Academy',
       type,
       images: [
-        {
+        image || {
           url: `${SITE_URL}/branding/altrisk-academy-logo.png`,
           width: 720,
           height: 720,

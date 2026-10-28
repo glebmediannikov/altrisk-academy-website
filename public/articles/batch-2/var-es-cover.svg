@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Value at risk and expected shortfall</title>
+  <desc id="desc">A hypothetical loss distribution marks the VaR percentile threshold and shades the tail whose average loss is expected shortfall.</desc>
+  <rect width="1600" height="900" fill="#f6fafb"/>
+  <circle cx="1340" cy="170" r="230" fill="#e3f3f1"/>
+  <circle cx="165" cy="770" r="250" fill="#e7eef6"/>
+  <g font-family="Arial,sans-serif">
+    <text x="120" y="150" fill="#147d92" font-size="25" font-weight="700" letter-spacing="4">RISK MEASUREMENT</text>
+    <text x="120" y="215" fill="#10233f" font-size="48" font-weight="700">A threshold is not the whole tail.</text>
+    <text x="120" y="260" fill="#607587" font-size="23">VaR marks a percentile. Expected shortfall averages a tail.</text>
+  </g>
+  <path d="M170 680H1440" stroke="#8298a7" stroke-width="4"/>
+  <path d="M170 680C350 677 430 645 515 520s130-245 290-245 200 195 300 300 170 100 335 105v0H170z" fill="#e5f4f2"/>
+  <path d="M170 680C350 677 430 645 515 520s130-245 290-245 200 195 300 300 170 100 335 105" fill="none" stroke="#147d92" stroke-width="10" stroke-linecap="round"/>
+  <path d="M1130 680c36-105 70-225 150-225 60 0 100 130 140 225z" fill="#b9e5df"/>
+  <path d="M1130 430V697M1260 430V697" stroke="#10233f" stroke-width="5" stroke-dasharray="11 10"/>
+  <g font-family="Arial,sans-serif">
+    <text x="1010" y="390" fill="#10233f" font-size="24" font-weight="700">VaR threshold</text>
+    <text x="1260" y="425" fill="#147d92" font-size="24" font-weight="700">Tail average (ES)</text>
+    <text x="170" y="740" fill="#607587" font-size="20">lower loss</text>
+    <text x="1340" y="740" fill="#607587" font-size="20">more severe loss</text>
+    <rect x="1130" y="780" width="320" height="50" rx="14" fill="#e7eef6"/>
+    <text x="1290" y="813" text-anchor="middle" fill="#344e63" font-size="18" font-weight="700">Illustrative distribution</text>
+  </g>
+</svg>

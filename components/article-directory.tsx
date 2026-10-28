@@ -2,6 +2,7 @@
 
 import {useState} from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import {Icon} from './icon';
 import type {Article} from '../lib/hub-articles';
 
@@ -41,12 +42,25 @@ export function ArticleDirectory({articles}: {articles: Article[]}) {
       <div className="article-grid">
         {filteredArticles.map((article, index) => (
           <Link className="article-card" href={`/articles/${article.slug}`} key={article.slug}>
-            <div className={`article-art article-art-${index % 3}`} aria-hidden="true">
-              <Icon
-                name={index % 3 === 0 ? 'shield' : index % 3 === 1 ? 'compass' : 'chart'}
-                size={45}
-              />
-            </div>
+            {article.coverImage ? (
+              <div className="article-art article-card-cover">
+                <Image
+                  src={article.coverImage.src}
+                  alt=""
+                  width={1600}
+                  height={900}
+                  sizes="(max-width: 650px) 100vw, 33vw"
+                  unoptimized
+                />
+              </div>
+            ) : (
+              <div className={`article-art article-art-${index % 3}`} aria-hidden="true">
+                <Icon
+                  name={index % 3 === 0 ? 'shield' : index % 3 === 1 ? 'compass' : 'chart'}
+                  size={45}
+                />
+              </div>
+            )}
             <div className="article-body">
               <span className="tiny-label">
                 {article.category.toUpperCase()} · {article.read.toUpperCase()} READ
