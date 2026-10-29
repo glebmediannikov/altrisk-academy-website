@@ -19,7 +19,8 @@ const modules = [
     name: 'My First $1,000',
     cat: 'VIRTUAL MONEY · BEGINNER',
     desc: 'Practice allocating a virtual starting amount, exploring trade-offs, and evaluating how decisions affect your plan.',
-    icon: 'wallet',
+    image: '/illustrations/risk-lab/my-first-1000.svg',
+    imageAlt: 'Virtual $1,000 split into savings, spending, and investing on a donut chart and allocation cards',
     href: APP_ACADEMY,
     action: 'Open My First $1,000',
     analyticsId: 'my-first-1000',
@@ -37,7 +38,8 @@ const modules = [
     name: 'Investment Risk Lab',
     cat: 'PORTFOLIO EXPERIMENTS',
     desc: 'Explore asset allocation, portfolio exposure, and simulated market conditions in an interactive environment.',
-    icon: 'chart',
+    image: '/illustrations/risk-lab/investment-risk-lab.svg',
+    imageAlt: 'Portfolio sandbox dashboard with an allocation donut, hypothetical growth paths, a risk gauge, and risk indicators',
     href: APP_ACADEMY,
     action: 'Open Investment Risk Lab',
     analyticsId: 'investment-risk-lab',
@@ -55,7 +57,8 @@ const modules = [
     name: 'Unexpected Events',
     cat: 'REAL-LIFE SCENARIOS',
     desc: 'See how unexpected expenses and changing circumstances can affect your financial choices.',
-    icon: 'activity',
+    image: '/illustrations/risk-lab/unexpected-events.svg',
+    imageAlt: 'Car repair estimate beside an emergency fund and savings jar covering an unplanned expense',
     href: APP_ACADEMY,
     action: 'Open Unexpected Events',
     analyticsId: 'unexpected-events',
@@ -73,7 +76,8 @@ const modules = [
     name: 'AltRisk Calculator',
     cat: 'RISK ANALYSIS TOOLS',
     desc: 'Experiment with financial risk calculations and compare possible outcomes using dedicated analytical tools.',
-    icon: 'calculator',
+    image: '/illustrations/risk-lab/altrisk-calculator.svg',
+    imageAlt: 'Risk matrix of likelihood and impact with numbered scenarios, beside a scenario comparison bar chart',
     href: APP_CALCULATOR,
     action: 'Open Risk Calculator',
     analyticsId: 'risk-calculator',
@@ -91,7 +95,8 @@ const modules = [
     name: 'Green Investing Lab',
     cat: 'SUSTAINABLE FINANCE · VIRTUAL PORTFOLIO',
     desc: 'Build a virtual green investment portfolio using a selected universe of clean-energy stocks and funds. Explore how market and climate-related scenarios affect risk and returns.',
-    icon: 'chart',
+    image: '/illustrations/risk-lab/green-investing.svg',
+    imageAlt: 'Solar panels and wind turbines on green hills beside a diversified green basket card',
     href: 'https://altrisk-academy.streamlit.app/?lab=green-investing',
     learnHref: '/green-investing',
     action: 'Launch Simulator',
@@ -110,7 +115,8 @@ const modules = [
     name: 'Responsible Consumption Lab',
     cat: 'SUSTAINABLE LIVING · EVERYDAY DECISIONS',
     desc: 'Compare everyday choices through practical simulations: rooftop solar versus grid electricity, school lighting upgrades, transportation, and buying or repairing products.',
-    icon: 'shield',
+    image: '/illustrations/risk-lab/responsible-consumption.svg',
+    imageAlt: 'House with rooftop solar, an electric car, a bicycle, and a checklist of sustainable choices',
     href: 'https://altrisk-academy.streamlit.app/?lab=responsible-consumption',
     learnHref: '/responsible-consumption',
     action: 'Launch Simulator',
@@ -144,8 +150,16 @@ export default function RiskLab() {
         <div className="module-grid">
           {modules.map((m, i) => (
             <div className="module-card" key={m.name}>
-              <div className={'module-visual module-visual-' + i}>
-                <Icon name={m.icon} size={50} />
+              <div className="module-visual">
+                <img
+                  className="module-visual-image"
+                  src={m.image}
+                  alt={m.imageAlt}
+                  width={960}
+                  height={600}
+                  loading="lazy"
+                  decoding="async"
+                />
                 <span className="module-number">0{i + 1}</span>
               </div>
               <div className="module-body">
