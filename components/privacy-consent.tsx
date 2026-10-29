@@ -1,11 +1,8 @@
 'use client';
 
 import {useEffect, useRef, useState} from 'react';
-import {
-  analyticsConsentEvent,
-  analyticsConsentStorageKey,
-  setGoogleAnalyticsDisabled,
-} from './google-analytics';
+import {setGoogleAnalyticsDisabled} from './google-analytics';
+import {analyticsConsentEvent, analyticsConsentStorageKey} from '../lib/analytics';
 
 type ConsentChoice = 'granted' | 'denied' | null;
 

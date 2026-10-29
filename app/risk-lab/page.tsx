@@ -1,6 +1,8 @@
 import Link from 'next/link';
 import { PageIntro, Cta } from '../../components/common';
 import { Icon } from '../../components/icon';
+import {AnalyticsLink} from '../../components/analytics-link';
+import type {AnalyticsDifficulty, AnalyticsTopic} from '../../lib/analytics';
 import { APP_ACADEMY, APP_CALCULATOR } from '../../lib/data';
 import type { Metadata } from 'next';
 import {pageMetadata} from '../../lib/seo';
@@ -20,6 +22,9 @@ const modules = [
     icon: 'wallet',
     href: APP_ACADEMY,
     action: 'Open My First $1,000',
+    analyticsId: 'my-first-1000',
+    analyticsTopic: 'financial_risk',
+    analyticsDifficulty: 'beginner',
     level: 'Beginner',
     steps: [
       'Start with a virtual amount and choose an allocation.',
@@ -35,6 +40,9 @@ const modules = [
     icon: 'chart',
     href: APP_ACADEMY,
     action: 'Open Investment Risk Lab',
+    analyticsId: 'investment-risk-lab',
+    analyticsTopic: 'investing',
+    analyticsDifficulty: 'beginner_intermediate',
     level: 'Beginner / Intermediate',
     steps: [
       'Choose a portfolio allocation.',
@@ -50,6 +58,9 @@ const modules = [
     icon: 'activity',
     href: APP_ACADEMY,
     action: 'Open Unexpected Events',
+    analyticsId: 'unexpected-events',
+    analyticsTopic: 'everyday_risk',
+    analyticsDifficulty: 'beginner',
     level: 'Beginner',
     steps: [
       'Review an unexpected financial event.',
@@ -65,6 +76,9 @@ const modules = [
     icon: 'calculator',
     href: APP_CALCULATOR,
     action: 'Open Risk Calculator',
+    analyticsId: 'risk-calculator',
+    analyticsTopic: 'risk_analytics',
+    analyticsDifficulty: 'intermediate',
     level: 'Intermediate',
     steps: [
       'Select an available risk analysis tool.',
@@ -81,6 +95,9 @@ const modules = [
     href: 'https://altrisk-academy.streamlit.app/?lab=green-investing',
     learnHref: '/green-investing',
     action: 'Launch Simulator',
+    analyticsId: 'green-investing-lab',
+    analyticsTopic: 'sustainable_finance',
+    analyticsDifficulty: 'beginner_intermediate',
     level: 'Beginner / Intermediate',
     steps: [
       'Learn the basics of sustainable investing on the dedicated learning page.',
@@ -97,6 +114,9 @@ const modules = [
     href: 'https://altrisk-academy.streamlit.app/?lab=responsible-consumption',
     learnHref: '/responsible-consumption',
     action: 'Launch Simulator',
+    analyticsId: 'responsible-consumption-lab',
+    analyticsTopic: 'sustainable_living',
+    analyticsDifficulty: 'beginner',
     level: 'Beginner',
     steps: [
       'Learn how sustainable everyday decisions affect costs and resources.',
@@ -105,7 +125,12 @@ const modules = [
     ],
     skills: ['Lifecycle cost', 'Energy decisions', 'Sustainability trade-offs'],
   },
-];
+] satisfies Array<
+  Record<string, unknown> & {
+    analyticsTopic: AnalyticsTopic;
+    analyticsDifficulty: AnalyticsDifficulty;
+  }
+>;
 
 export default function RiskLab() {
   return (
@@ -151,14 +176,21 @@ export default function RiskLab() {
                       Learn &amp; Explore <Icon name="arrow" size={17} />
                     </Link>
                   )}
-                  <a
+                  <AnalyticsLink
                     className={'learnHref' in m ? 'text-link' : 'button'}
                     href={m.href}
                     target="_blank"
                     rel="noopener noreferrer"
+                    eventName="risk_simulation_start"
+                    eventParameters={{
+                      content_id: m.analyticsId,
+                      content_type: 'simulation',
+                      topic: m.analyticsTopic,
+                      difficulty: m.analyticsDifficulty,
+                    }}
                   >
                     {m.action} <Icon name="external" size={17} />
-                  </a>
+                  </AnalyticsLink>
                 </div>
               </div>
             </div>

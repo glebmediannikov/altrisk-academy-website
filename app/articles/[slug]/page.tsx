@@ -4,7 +4,10 @@ import {notFound} from 'next/navigation';
 import type {Metadata} from 'next';
 import {lessons, paths} from '../../../lib/data';
 import {Icon} from '../../../components/icon';
+import {AnalyticsLink} from '../../../components/analytics-link';
+import {ArticleEngagementTracker} from '../../../components/article-engagement-tracker';
 import {StructuredData} from '../../../components/structured-data';
+import {getAnalyticsTopic} from '../../../lib/analytics';
 import {
   FINANCIAL_EDUCATION_DISCLAIMER,
   FOUNDER_ID,
@@ -176,6 +179,7 @@ export default async function Article({
         </div>
 
         <div className="article-prose">
+          <ArticleEngagementTracker contentId={article.slug} category={article.category} />
           <section className="article-answer" aria-labelledby="article-answer-heading">
             <h2 id="article-answer-heading">In brief</h2>
             <p>{article.directAnswer || article.introduction}</p>
@@ -259,7 +263,17 @@ export default async function Article({
             <ul className="article-resource-list">
               {relatedArticles.map((related) => (
                 <li key={related.slug}>
-                  <Link href={`/articles/${related.slug}`}>{related.title}</Link>
+                  <AnalyticsLink
+                    href={`/articles/${related.slug}`}
+                    eventName="article_related_click"
+                    eventParameters={{
+                      content_id: related.slug,
+                      content_type: 'article',
+                      topic: getAnalyticsTopic(related.category),
+                    }}
+                  >
+                    {related.title}
+                  </AnalyticsLink>
                 </li>
               ))}
               {learningPaths.map((path) => (

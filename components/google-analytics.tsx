@@ -3,25 +3,16 @@
 import Script from 'next/script';
 import {usePathname} from 'next/navigation';
 import {useEffect, useRef, useState} from 'react';
-
-const configuredMeasurementId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID?.trim();
-const measurementId = configuredMeasurementId || 'G-56KG7JRY77';
-const isValidMeasurementId = /^G-[A-Z0-9]+$/.test(measurementId);
-
-export const analyticsConsentStorageKey = 'altrisk-analytics-consent';
-export const analyticsConsentEvent = 'altrisk-analytics-consent';
-
-declare global {
-  interface Window {
-    [key: `ga-disable-${string}`]: boolean | undefined;
-    dataLayer?: IArguments[];
-    gtag?: (...args: [string, ...unknown[]]) => void;
-  }
-}
+import {
+  GA_MEASUREMENT_ID,
+  analyticsConsentEvent,
+  analyticsConsentStorageKey,
+  isValidGaMeasurementId,
+} from '../lib/analytics';
 
 export function setGoogleAnalyticsDisabled(disabled: boolean) {
-  if (isValidMeasurementId) {
-    window[`ga-disable-${measurementId}`] = disabled;
+  if (isValidGaMeasurementId) {
+    window[`ga-disable-${GA_MEASUREMENT_ID}`] = disabled;
   }
 }
 
@@ -32,7 +23,7 @@ export function ConsentAwareGoogleAnalytics() {
   const lastTrackedPath = useRef<string | null>(null);
 
   useEffect(() => {
-    if (configuredMeasurementId && !isValidMeasurementId) {
+    if (!isValidGaMeasurementId) {
       console.error('Invalid NEXT_PUBLIC_GA_MEASUREMENT_ID; analytics remains disabled.');
     }
   }, []);
@@ -78,7 +69,7 @@ export function ConsentAwareGoogleAnalytics() {
     lastTrackedPath.current = pathname;
   }, [hasConsent, pathname, scriptReady]);
 
-  if (process.env.NODE_ENV !== 'production' || !isValidMeasurementId || !hasConsent) {
+  if (process.env.NODE_ENV !== 'production' || !isValidGaMeasurementId || !hasConsent) {
     return null;
   }
 
@@ -96,13 +87,13 @@ export function ConsentAwareGoogleAnalytics() {
               allow_google_signals: false,
               allow_ad_personalization_signals: false,
             });
-            window.gtag('config', '${measurementId}', {send_page_view: false});
+            window.gtag('config', '${GA_MEASUREMENT_ID}', {send_page_view: false});
           `,
         }}
       />
       <Script
         id="altrisk-ga-script"
-        src={`https://www.googletagmanager.com/gtag/js?id=${measurementId}`}
+        src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
         strategy="afterInteractive"
         onReady={() => setScriptReady(true)}
       />
