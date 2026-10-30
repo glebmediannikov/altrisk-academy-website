@@ -1,4 +1,5 @@
 import {batchTwoArticles} from './batch-two-articles';
+import {batchThreeArticles} from './batch-three-articles';
 import {enhanceArticle} from './article-editorial';
 
 export type Article = {
@@ -14,6 +15,7 @@ export type Article = {
   relatedArticles: string[];
   learningPaths: string[];
   sources: {title: string; publisher: string; url: string}[];
+  status?: 'draft' | 'published';
   seoTitle?: string;
   seoDescription?: string;
   directAnswer?: string;
@@ -512,6 +514,14 @@ const firstEditorialBatch: Article[] = [
   },
 ];
 
-export const hubArticles: Article[] = [...firstEditorialBatch, ...batchTwoArticles].map(
+const includeDraftArticles = process.env.ALTRISK_INCLUDE_DRAFT_ARTICLES === 'true';
+
+export const hubArticles: Article[] = [
+  ...firstEditorialBatch,
+  ...batchTwoArticles,
+  ...batchThreeArticles,
+]
+  .filter((article) => article.status !== 'draft' || includeDraftArticles)
+  .map(
   enhanceArticle,
 );

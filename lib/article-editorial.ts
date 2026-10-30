@@ -302,6 +302,30 @@ export const articleEditorial: Record<string, ArticleEditorial> = {
     directAnswer:
       'VaR estimates a loss threshold at a chosen confidence level; expected shortfall estimates average losses in the specified tail. Both depend on models and assumptions.',
   },
+  'personal-risk-management-plan': {
+    directAnswer:
+      'A personal risk management plan lists the events that could strain your finances, rates how likely and how damaging each one is, and records how savings and insurance respond, then reviews the plan regularly.',
+  },
+  'cybersecurity-risk-students-small-business': {
+    directAnswer:
+      'Cybersecurity risk is the chance that a digital attack, mistake, or system failure damages accounts, data, or money. Multi-factor authentication, phishing checks, and regular backups can reduce several common risks.',
+  },
+  'business-risk-management-young-entrepreneurs': {
+    directAnswer:
+      'Business risk management for a young entrepreneur means identifying the risks that could stop operations or payments, keeping a cash reserve sized to fixed costs, reviewing insurance, and tracking legal obligations.',
+  },
+  'climate-risk-financial-decisions': {
+    directAnswer:
+      'Climate risk can affect financial decisions through physical risk from extreme weather and climate conditions and transition risk from policy, technology, and market change. Scenario analysis explores these paths but does not forecast them.',
+  },
+  'behavioral-biases-financial-decisions': {
+    directAnswer:
+      'A behavioral bias is a predictable shortcut in judgment that can distort financial decisions. Anchoring is the tendency to rely too heavily on the first number seen, so comparing options before deciding helps.',
+  },
+  'stress-test-personal-budget': {
+    directAnswer:
+      'A personal budget stress test compares the cost of plausible setbacks, such as a car repair or a temporary income drop, with the cash in your emergency fund to show any gap. It is a planning tool, not a forecast.',
+  },
 };
 
 export function enhanceArticle<T extends {slug: string; title: string; excerpt: string}>(

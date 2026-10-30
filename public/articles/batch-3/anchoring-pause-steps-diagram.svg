@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Three steps to slow down an anchored decision</title>
+  <desc id="desc">A numbered checklist: notice the first number, name a second reference point, and write the decision in plain terms.</desc>
+  <rect width="1000" height="620" fill="#f6fafb"/>
+  <text x="60" y="95" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">A simple check to slow down</text>
+
+  <rect x="60" y="150" width="880" height="400" rx="26" fill="#ffffff" stroke="#d6e2ea" stroke-width="3"/>
+
+  <circle cx="150" cy="245" r="46" fill="#6d4fb0"/>
+  <text x="150" y="259" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">1</text>
+  <text x="240" y="259" font-family="Arial, sans-serif" font-size="40" fill="#10233f">Notice the first number you saw</text>
+
+  <circle cx="150" cy="355" r="46" fill="#147d92"/>
+  <text x="150" y="369" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">2</text>
+  <text x="240" y="369" font-family="Arial, sans-serif" font-size="40" fill="#10233f">Name a second reference point</text>
+
+  <circle cx="150" cy="465" r="46" fill="#f2b33d"/>
+  <text x="150" y="479" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">3</text>
+  <text x="240" y="479" font-family="Arial, sans-serif" font-size="40" fill="#10233f">Write your decision in plain terms</text>
+</svg>

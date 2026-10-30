@@ -117,7 +117,7 @@ a:focus-visible,button:focus-visible,input:focus-visible { outline:3px solid #13
 .article-faq-item h3{margin:0 0 8px;color:var(--navy);font-size:18px;letter-spacing:-.02em}
 .article-faq-item p{margin:0}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-@media(max-width:650px){.article-figure{margin:24px 0 32px;padding:8px}.article-figure figcaption{font-size:12px}.article-cover-figure{margin-top:22px}.article-diagram{overflow-x:auto;overscroll-behavior-inline:contain}.article-diagram img{width:960px;max-width:none}}
+@media(max-width:650px){.article-figure{margin:24px 0 32px;padding:8px}.article-figure figcaption{font-size:12px}.article-cover-figure{margin-top:22px}}
 
 /* Homepage visual redesign */
 .home-hero{position:relative;overflow:hidden;background:#f1f6fb;color:var(--navy)}

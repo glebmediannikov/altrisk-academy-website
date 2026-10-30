@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Three questions for climate risk in financial decisions</title>
+  <desc id="desc">Three cards describe physical risk, transition risk, and a decision check. A navy banner notes that the example is hypothetical and not a forecast.</desc>
+  <rect width="1000" height="620" fill="#f6fafb"/>
+  <text x="60" y="95" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">Three climate risk questions</text>
+
+  <rect x="30" y="150" width="290" height="310" rx="24" fill="#ffffff" stroke="#147d92" stroke-width="4"/>
+  <rect x="30" y="150" width="290" height="20" rx="10" fill="#147d92"/>
+  <text x="175" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#10233f">Physical</text>
+  <text x="175" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#607587">Floods, heat</text>
+  <text x="175" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#607587">Storms, drought</text>
+
+  <rect x="355" y="150" width="290" height="310" rx="24" fill="#ffffff" stroke="#6d4fb0" stroke-width="4"/>
+  <rect x="355" y="150" width="290" height="20" rx="10" fill="#6d4fb0"/>
+  <text x="500" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#10233f">Transition</text>
+  <text x="500" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#607587">Policy &amp; tech</text>
+  <text x="500" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#607587">Demand shifts</text>
+
+  <rect x="680" y="150" width="290" height="310" rx="24" fill="#ffffff" stroke="#2e8b57" stroke-width="4"/>
+  <rect x="680" y="150" width="290" height="20" rx="10" fill="#2e8b57"/>
+  <text x="825" y="235" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#10233f">Your check</text>
+  <text x="825" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#607587">Exposure?</text>
+  <text x="825" y="365" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#607587">Time frame?</text>
+
+  <rect x="40" y="495" width="920" height="115" rx="18" fill="#10233f"/>
+  <text x="500" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">Hypothetical framework</text>
+  <text x="500" y="590" text-anchor="middle" font-family="Arial, sans-serif" font-size="36" fill="#ffffff">Not a forecast of any investment</text>
+</svg>

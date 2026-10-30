@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Likelihood and impact matrix for personal risks</title>
+  <desc id="desc">A three by three grid. Higher impact sits at the top and higher likelihood sits to the right. Three hypothetical risks are placed in the grid.</desc>
+  <rect width="1000" height="620" fill="#f6fafb"/>
+  <text x="60" y="68" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">Rate each risk on a grid</text>
+  <text x="60" y="122" font-family="Arial, sans-serif" font-size="40" fill="#607587">Hypothetical example: impact rises upward</text>
+
+  <rect x="200" y="150" width="250" height="130" fill="#fdebc4"/>
+  <rect x="450" y="150" width="250" height="130" fill="#e4dcf5"/>
+  <rect x="700" y="150" width="250" height="130" fill="#e4dcf5"/>
+  <rect x="200" y="280" width="250" height="130" fill="#d8f0e3"/>
+  <rect x="450" y="280" width="250" height="130" fill="#fdebc4"/>
+  <rect x="700" y="280" width="250" height="130" fill="#e4dcf5"/>
+  <rect x="200" y="410" width="250" height="130" fill="#d8f0e3"/>
+  <rect x="450" y="410" width="250" height="130" fill="#d8f0e3"/>
+  <rect x="700" y="410" width="250" height="130" fill="#fdebc4"/>
+
+  <rect x="585" y="183" width="240" height="64" rx="14" fill="#10233f"/>
+  <text x="705" y="225" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Job loss</text>
+  <rect x="335" y="313" width="240" height="64" rx="14" fill="#10233f"/>
+  <text x="455" y="355" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Car repair</text>
+  <rect x="85" y="443" width="240" height="64" rx="14" fill="#10233f"/>
+  <text x="205" y="485" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#ffffff">Phone loss</text>
+
+  <text x="200" y="600" font-family="Arial, sans-serif" font-size="36" fill="#607587">Likelihood rises to the right</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Months of expenses held in a cash reserve</title>
+  <desc id="desc">Four bars compare a hypothetical cash reserve of zero, one, three, and six months of business expenses.</desc>
+  <rect width="1000" height="620" fill="#f6fafb"/>
+  <text x="60" y="85" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">Months of expenses in reserve</text>
+  <text x="60" y="140" font-family="Arial, sans-serif" font-size="40" fill="#607587">Hypothetical example only</text>
+
+  <path d="M80 500 H920" stroke="#607587" stroke-width="4"/>
+  <rect x="125" y="440" width="150" height="60" rx="8" fill="#147d92"/>
+  <rect x="345" y="320" width="150" height="180" rx="8" fill="#2f6fbf"/>
+  <rect x="565" y="140" width="150" height="360" rx="8" fill="#6d4fb0"/>
+
+  <text x="200" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#10233f">1 month</text>
+  <text x="420" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#10233f">3 months</text>
+  <text x="640" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#10233f">6 months</text>
+  <text x="860" y="550" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#10233f">0 months</text>
+  <text x="860" y="462" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#b7791f">No reserve</text>
+</svg>

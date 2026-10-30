@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Two checks before account access</title>
+  <desc id="desc">Three boxes in a row: a password, then a code or app approval, then access to the account. An arrow connects each step.</desc>
+  <rect width="1000" height="620" fill="#f6fafb"/>
+  <text x="60" y="95" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">Two checks before access</text>
+  <text x="60" y="150" font-family="Arial, sans-serif" font-size="40" fill="#607587">Multi-factor authentication adds a check</text>
+
+  <rect x="30" y="230" width="280" height="170" rx="24" fill="#ffffff" stroke="#147d92" stroke-width="4"/>
+  <text x="170" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#10233f">Password</text>
+
+  <path d="M318 315 H342" stroke="#f2b33d" stroke-width="10" stroke-linecap="round"/>
+  <path d="M328 292 L346 315 L328 338" fill="none" stroke="#f2b33d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="350" y="230" width="280" height="170" rx="24" fill="#ffffff" stroke="#6d4fb0" stroke-width="4"/>
+  <text x="490" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" font-weight="700" fill="#10233f">Code or app</text>
+
+  <path d="M638 315 H662" stroke="#f2b33d" stroke-width="10" stroke-linecap="round"/>
+  <path d="M648 292 L666 315 L648 338" fill="none" stroke="#f2b33d" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="670" y="230" width="280" height="170" rx="24" fill="#10233f"/>
+  <text x="810" y="332" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#ffffff">Account</text>
+
+  <rect x="30" y="455" width="920" height="130" rx="20" fill="#e6f4ee"/>
+  <text x="490" y="515" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" fill="#10233f">A stolen password alone is not enough.</text>
+  <text x="490" y="560" text-anchor="middle" font-family="Arial, sans-serif" font-size="44" fill="#607587">Hypothetical illustration</text>
+</svg>

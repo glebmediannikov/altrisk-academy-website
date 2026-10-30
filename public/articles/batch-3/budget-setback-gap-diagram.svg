@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 620" role="img" aria-labelledby="title desc">
+  <title id="title">Hypothetical setback gap compared with an emergency fund</title>
+  <desc id="desc">Two bars compare hypothetical setback costs of $2,600 with a hypothetical emergency fund of $2,400. A $200 shortfall is marked at the end of the fund bar.</desc>
+  <rect width="1000" height="620" fill="#f6fafb"/>
+  <text x="60" y="88" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">Setbacks vs. savings</text>
+  <text x="60" y="142" font-family="Arial, sans-serif" font-size="44" fill="#607587">Hypothetical example</text>
+
+  <text x="60" y="225" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#10233f">Setback costs: $2,600</text>
+  <rect x="60" y="240" width="880" height="80" rx="12" fill="#6d4fb0"/>
+  <text x="90" y="294" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">$2,600</text>
+
+  <text x="60" y="355" font-family="Arial, sans-serif" font-size="44" font-weight="700" fill="#10233f">Emergency fund: $2,400</text>
+  <rect x="60" y="370" width="812" height="80" rx="12" fill="#2e8b57"/>
+  <text x="90" y="424" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#ffffff">$2,400</text>
+  <rect x="872" y="370" width="68" height="80" rx="12" fill="#fdebc4" stroke="#b7791f" stroke-width="4" stroke-dasharray="12 8"/>
+
+  <rect x="60" y="480" width="880" height="115" rx="18" fill="#10233f"/>
+  <text x="500" y="530" text-anchor="middle" font-family="Arial, sans-serif" font-size="48" font-weight="700" fill="#ffffff">Shortfall: $200</text>
+  <text x="500" y="576" text-anchor="middle" font-family="Arial, sans-serif" font-size="40" fill="#ffffff">after the full fund is used</text>
+</svg>

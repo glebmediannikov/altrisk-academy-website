@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+  <title id="title">Anchoring and behavioral biases in financial decisions</title>
+  <desc id="desc">A first price number pulls a later judgment toward it. Two price tags show a high anchor and a lower comparison price.</desc>
+  <rect width="1600" height="900" fill="#f6fafb"/>
+  <text x="80" y="120" font-family="Arial, sans-serif" font-size="88" font-weight="700" fill="#10233f">Anchoring</text>
+  <text x="80" y="190" font-family="Arial, sans-serif" font-size="52" fill="#607587">The first number you see can pull your judgment</text>
+
+  <rect x="100" y="260" width="620" height="420" rx="28" fill="#ffffff" stroke="#6d4fb0" stroke-width="4"/>
+  <text x="410" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">First price seen</text>
+  <rect x="200" y="380" width="420" height="140" rx="20" fill="#6d4fb0"/>
+  <text x="410" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" font-weight="700" fill="#ffffff">$1,199</text>
+
+  <path d="M780 470 H880" stroke="#f2b33d" stroke-width="12" stroke-linecap="round"/>
+  <path d="M860 440 L900 470 L860 500" fill="none" stroke="#f2b33d" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <rect x="940" y="260" width="560" height="420" rx="28" fill="#ffffff" stroke="#147d92" stroke-width="4"/>
+  <text x="1220" y="340" text-anchor="middle" font-family="Arial, sans-serif" font-size="52" font-weight="700" fill="#10233f">Later comparison</text>
+  <rect x="1040" y="380" width="360" height="140" rx="20" fill="#147d92"/>
+  <text x="1220" y="478" text-anchor="middle" font-family="Arial, sans-serif" font-size="96" font-weight="700" fill="#ffffff">$899</text>
+
+  <rect x="100" y="720" width="1400" height="120" rx="20" fill="#10233f"/>
+  <text x="800" y="798" text-anchor="middle" font-family="Arial, sans-serif" font-size="60" fill="#ffffff">Pause, compare, then decide.</text>
+</svg>
