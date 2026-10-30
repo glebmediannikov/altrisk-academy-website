@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import {Icon} from '../components/icon';
 import {Cta} from '../components/common';
+import {HeadingText} from '../components/heading-text';
 import {
   EducationalIllustrationCard,
   FeatureCard,
@@ -48,7 +49,7 @@ export default function Home() {
               <span className="home-kicker-mark"><Icon name="sparkles" size={15}/></span>
               FREE, INTERACTIVE RISK EDUCATION
             </div>
-            <h1>Make sense of uncertainty. <span>Make more informed decisions.</span></h1>
+            <h1>Make sense of uncertainty. <span>Make more informed decisions</span></h1>
             <p className="home-hero-lede">
               Learn how risk shapes money, careers, technology, and everyday choices—then practice
               thinking it through in a safe, educational setting.
@@ -75,7 +76,7 @@ export default function Home() {
               <div className="decision-illustration-top">
                 <div>
                   <span className="illustration-overline">A PRACTICAL WAY TO THINK</span>
-                  <h2>Every choice has a context.</h2>
+                  <h2><HeadingText text="Every choice has a context."/></h2>
                 </div>
                 <span className="decision-compass"><Icon name="compass" size={23}/></span>
               </div>
@@ -163,7 +164,7 @@ export default function Home() {
               <Link className={`home-path-card home-path-card-${index % 6}`} href={`/learn/${path.slug}`} key={path.slug}>
                 <span className="home-path-icon"><Icon name={path.icon} size={24}/></span>
                 <span className="home-path-level">{path.soon ? 'EXPLORE THE BASICS' : 'START HERE'}</span>
-                <h3>{path.title}</h3>
+                <h3><HeadingText text={path.title}/></h3>
                 <p>{path.desc}</p>
                 <span className="home-path-action">Explore path <Icon name="arrow" size={16}/></span>
               </Link>
@@ -196,7 +197,7 @@ export default function Home() {
               </div>
               <div className="home-lab-body">
                 <span className="home-card-kicker">BEGINNER-FRIENDLY SIMULATION</span>
-                <h3>My First $1,000</h3>
+                <h3><HeadingText text="My First $1,000"/></h3>
                 <p>Practice allocation and explore how an unexpected expense might affect a plan.</p>
                 <a className="text-link" href={APP_ACADEMY} target="_blank" rel="noopener noreferrer">
                   Launch simulation <Icon name="external" size={16}/>
@@ -216,7 +217,7 @@ export default function Home() {
               </div>
               <div className="home-lab-body">
                 <span className="home-card-kicker">ANALYZE &amp; COMPARE</span>
-                <h3>AltRisk Calculator</h3>
+                <h3><HeadingText text="AltRisk Calculator"/></h3>
                 <p>Use hands-on analytical tools to explore risk concepts and compare assumptions.</p>
                 <a className="text-link" href={APP_CALCULATOR} target="_blank" rel="noopener noreferrer">
                   Open calculator <Icon name="external" size={16}/>
@@ -264,7 +265,7 @@ export default function Home() {
             <div className="home-term-card">
               <span className="home-term-icon"><Icon name="book" size={20}/></span>
               <span className="home-card-kicker">A WORD TO KNOW</span>
-              <h3>Risk tolerance</h3>
+              <h3><HeadingText text="Risk tolerance"/></h3>
               <p>How much uncertainty or potential loss a person is willing and able to accept while pursuing a goal.</p>
               <Link href="/dictionary">Explore the Risk Dictionary <Icon name="arrow" size={16}/></Link>
             </div>
@@ -297,7 +298,7 @@ export default function Home() {
           </div>
           <div className="home-challenge-example">
             <div className="home-challenge-top"><span>DECISION PRACTICE</span><Icon name="activity" size={20}/></div>
-            <h3>A portfolio falls in value. What should you consider first?</h3>
+            <h3><HeadingText text="A portfolio falls in value. What should you consider first?"/></h3>
             <ul>
               <li><span>A</span> Revisit the goal and time horizon</li>
               <li><span>B</span> Check what changed and what did not</li>
@@ -320,7 +321,7 @@ export default function Home() {
               <div className="home-step" key={step.name}>
                 <span className="home-step-number">0{index + 1}</span>
                 <span className={`home-step-icon home-step-icon-${index}`}><Icon name={step.icon} size={23}/></span>
-                <h3>{step.name}</h3>
+                <h3><HeadingText text={step.name}/></h3>
                 <p>{step.text}</p>
                 {index < steps.length - 1 && <Icon className="home-step-arrow" name="arrow" size={18}/>}
               </div>
@@ -333,7 +334,7 @@ export default function Home() {
         <div className="container home-educator-band">
           <div>
             <span className="eyebrow">FOR SCHOOLS &amp; CLUBS</span>
-            <h2>Bring risk-aware thinking into the classroom.</h2>
+            <h2><HeadingText text="Bring risk-aware thinking into the classroom."/></h2>
             <p>Use short explanations and practical simulations to spark discussion about trade-offs, uncertainty, and financial decisions. Free resources for educators and student clubs.</p>
           </div>
           <Link href="/for-educators" className="button">Explore educator resources <Icon name="arrow" size={17}/></Link>
@@ -350,7 +351,7 @@ export default function Home() {
           </div>
           <div>
             <span className="eyebrow"><span className="eyebrow-dot"/> OUR STORY</span>
-            <h2>Built by a student. Designed for the next generation.</h2>
+            <h2><HeadingText text="Built by a student. Designed for the next generation."/></h2>
             <p>Founded by Maria Mediannikova, AltRisk Academy starts with a simple belief: students deserve the tools to understand and manage risk before life puts their decisions to the test.</p>
             <p>What began with interactive financial tools is growing into a broader learning platform for risk, resilience, and smarter choices.</p>
             <Link className="text-link" href="/about">Meet the founder <Icon name="arrow" size={17}/></Link>

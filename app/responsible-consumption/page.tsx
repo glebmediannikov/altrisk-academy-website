@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {ORGANIZATION_ID, pageMetadata} from '../../lib/seo';
+import {HeadingText} from '../../components/heading-text';
 
 const canonical = 'https://altriskacademy.com/responsible-consumption';
 const labUrl = 'https://altrisk-academy.streamlit.app/?lab=responsible-consumption';
@@ -29,17 +30,17 @@ export default function ResponsibleConsumption() {
     <main className="container section">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
       <p className="eyebrow">SUSTAINABILITY MEETS FINANCIAL LITERACY</p>
-      <h1>Responsible Consumption & Solar Panel Savings Lab</h1>
+      <h1><HeadingText text="Responsible Consumption & Solar Panel Savings Lab"/></h1>
       <p>Discover how everyday choices affect household spending and the environment. Explore the long-term cost of solar panels, energy-efficient lighting, transportation, and buying decisions through interactive scenarios.</p>
-      <h2>Solar panels vs. no solar panels</h2>
+      <h2><HeadingText text="Solar panels vs. no solar panels"/></h2>
       <p>Compare two hypothetical homes with similar electricity needs. Change installation cost, electricity prices, solar coverage, and the time period, then examine cumulative spending and estimated payback. The results illustrate assumptions, not guaranteed savings.</p>
-      <h2>Explore everyday trade-offs</h2>
+      <h2><HeadingText text="Explore everyday trade-offs"/></h2>
       <ul><li>Solar installation costs versus ongoing utility bills.</li><li>Upfront lighting expenses versus electricity savings.</li><li>Transportation alternatives and long-term operating expenses.</li><li>Buying, repairing, and replacing consumer products.</li></ul>
-      <h2>Launch the interactive lab</h2>
+      <h2><HeadingText text="Launch the interactive lab"/></h2>
       <p><a className="button" href={labUrl} target="_blank" rel="noopener noreferrer">Open Responsible Consumption Lab ↗</a></p>
       <p>Continue with the <Link href="/risk-lab">full Risk Lab</Link> or browse <Link href="/for-educators">classroom resources</Link>.</p>
-      <h2>Frequently asked questions</h2>
-      {faq.map(item => <section key={item.q}><h3>{item.q}</h3><p>{item.a}</p></section>)}
+      <h2><HeadingText text="Frequently asked questions"/></h2>
+      {faq.map(item => <section key={item.q}><h3><HeadingText text={item.q}/></h3><p>{item.a}</p></section>)}
       <p className="lab-disclaimer">Educational estimates only; not a household quote, engineering assessment, or guarantee of environmental savings.</p>
     </main>
   );

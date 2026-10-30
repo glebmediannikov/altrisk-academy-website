@@ -6,6 +6,7 @@ import {lessons, paths} from '../../../lib/data';
 import {Icon} from '../../../components/icon';
 import {AnalyticsLink} from '../../../components/analytics-link';
 import {ArticleEngagementTracker} from '../../../components/article-engagement-tracker';
+import {HeadingText} from '../../../components/heading-text';
 import {StructuredData} from '../../../components/structured-data';
 import {getAnalyticsTopic} from '../../../lib/analytics';
 import {
@@ -155,7 +156,7 @@ export default async function Article({
           <span className="eyebrow-dot" />
           {article.category.toUpperCase()} · {article.read.toUpperCase()} READ
         </div>
-        <h1>{article.title}</h1>
+        <h1><HeadingText text={article.title}/></h1>
         <p className="article-lede">{article.excerpt}</p>
         <div className="article-byline">
           <span className="author-avatar">M</span>
@@ -181,7 +182,7 @@ export default async function Article({
         <div className="article-prose">
           <ArticleEngagementTracker contentId={article.slug} category={article.category} />
           <section className="article-answer" aria-labelledby="article-answer-heading">
-            <h2 id="article-answer-heading">In brief</h2>
+            <h2 id="article-answer-heading"><HeadingText text="In brief"/></h2>
             <p>{article.directAnswer || article.introduction}</p>
           </section>
           <p className="article-introduction">{article.introduction}</p>
@@ -201,7 +202,7 @@ export default async function Article({
           {article.sections.map((section) => (
             <div key={section.heading}>
               <section className="article-content-section">
-                <h2>{section.heading}</h2>
+                <h2><HeadingText text={section.heading}/></h2>
                 {section.paragraphs.map((paragraph) => (
                   <p key={paragraph}>{paragraph}</p>
                 ))}
@@ -228,7 +229,7 @@ export default async function Article({
             </div>
           ))}
           <section className="article-content-section">
-            <h2>{article.example.heading}</h2>
+            <h2><HeadingText text={article.example.heading}/></h2>
             {article.example.paragraphs.map((paragraph) => (
               <p key={paragraph}>{paragraph}</p>
             ))}
@@ -237,7 +238,7 @@ export default async function Article({
           <section className="article-callout article-takeaways" aria-labelledby="key-takeaways">
             <Icon name="sparkles" size={23} />
             <div>
-              <h2 id="key-takeaways">Key takeaways</h2>
+              <h2 id="key-takeaways"><HeadingText text="Key takeaways"/></h2>
               <ul>
                 {article.keyTakeaways.map((takeaway) => (
                   <li key={takeaway}>{takeaway}</li>
@@ -248,10 +249,10 @@ export default async function Article({
 
           {article.faqs && article.faqs.length > 0 && (
             <section className="article-content-section article-faq" aria-labelledby="article-faq">
-              <h2 id="article-faq">Frequently asked questions</h2>
+              <h2 id="article-faq"><HeadingText text="Frequently asked questions"/></h2>
               {article.faqs.map((faq) => (
                 <div className="article-faq-item" key={faq.question}>
-                  <h3>{faq.question}</h3>
+                  <h3><HeadingText text={faq.question}/></h3>
                   <p>{faq.answer}</p>
                 </div>
               ))}
@@ -259,7 +260,7 @@ export default async function Article({
           )}
 
           <section className="article-content-section article-resources">
-            <h2>Related learning resources</h2>
+            <h2><HeadingText text="Related learning resources"/></h2>
             <ul className="article-resource-list">
               {relatedArticles.map((related) => (
                 <li key={related.slug}>
@@ -288,7 +289,7 @@ export default async function Article({
           </section>
 
           <section className="article-content-section article-sources">
-            <h2>Sources &amp; Further Reading</h2>
+            <h2><HeadingText text="Sources & Further Reading"/></h2>
             <ul className="article-source-list">
               {article.sources.map((source) => (
                 <li key={source.url}>

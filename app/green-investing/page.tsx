@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import {ORGANIZATION_ID, pageMetadata} from '../../lib/seo';
+import {HeadingText} from '../../components/heading-text';
 
 const canonical = 'https://altriskacademy.com/green-investing';
 const labUrl = 'https://altrisk-academy.streamlit.app/?lab=green-investing';
@@ -30,17 +31,17 @@ export default function GreenInvesting() {
     <main className="container section">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema).replace(/</g, '\\u003c') }} />
       <p className="eyebrow">FREE INTERACTIVE RISK EDUCATION</p>
-      <h1>Green Investing Simulator for Students</h1>
+      <h1><HeadingText text="Green Investing Simulator for Students"/></h1>
       <p>Learn how sustainable investing connects environmental goals with financial uncertainty. Create a virtual portfolio, explore hypothetical market scenarios, and reflect on risks without investing real money.</p>
-      <h2>What is green investing?</h2>
+      <h2><HeadingText text="What is green investing?"/></h2>
       <p>Green investing focuses on investments associated with environmental activities or outcomes, such as renewable energy or efficiency. A green label is not proof of environmental impact, and clean-energy stocks can be volatile. Always examine the specific fund or company and its disclosures.</p>
-      <h2>What will you practice?</h2>
+      <h2><HeadingText text="What will you practice?"/></h2>
       <ul><li>Allocate a hypothetical $10,000 portfolio across a limited set of green-themed securities.</li><li>Explore the difference between individual stocks, ETFs, and green bonds.</li><li>Compare potential return, volatility, diversification, and drawdown under simplified scenarios.</li><li>Recognize greenwashing and avoid treating sustainability as a guarantee of financial performance.</li></ul>
-      <h2>Start the free simulation</h2>
+      <h2><HeadingText text="Start the free simulation"/></h2>
       <p><a className="button" href={labUrl} target="_blank" rel="noopener noreferrer">Open Green Investing Lab ↗</a></p>
       <p>For more activities, visit the <Link href="/risk-lab">Risk Lab</Link>. Teachers can explore <Link href="/for-educators">educator resources</Link>.</p>
-      <h2>Frequently asked questions</h2>
-      {faq.map(item => <section key={item.q}><h3>{item.q}</h3><p>{item.a}</p></section>)}
+      <h2><HeadingText text="Frequently asked questions"/></h2>
+      {faq.map(item => <section key={item.q}><h3><HeadingText text={item.q}/></h3><p>{item.a}</p></section>)}
       <p className="lab-disclaimer">Educational simulations only. Figures and market scenarios may be simplified or hypothetical; not investment advice.</p>
     </main>
   );

@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import {PageIntro, Cta} from '../../components/common';
+import {HeadingText} from '../../components/heading-text';
 import {Icon} from '../../components/icon';
 import type {Metadata} from 'next';
 import Link from 'next/link';
@@ -61,7 +62,7 @@ export default function About() {
         <div className="about-grid">
           <div className="content-card">
             <span className="tiny-label">WHAT WE BELIEVE</span>
-            <h2>Real learning starts with better questions.</h2>
+            <h2><HeadingText text="Real learning starts with better questions."/></h2>
             <p>
               Traditional financial education often focuses on saving, budgeting, and investing.
               AltRisk Academy goes further — inviting students to consider uncertainty, potential
@@ -79,17 +80,17 @@ export default function About() {
           <div className="about-values">
             <div>
               <Icon name="heart" size={26}/>
-              <h3>Accessible</h3>
+              <h3><HeadingText text="Accessible"/></h3>
               <p>Foundational learning should be open to every curious student.</p>
             </div>
             <div>
               <Icon name="target" size={26}/>
-              <h3>Practical</h3>
+              <h3><HeadingText text="Practical"/></h3>
               <p>Students learn by applying ideas in simulated real-world settings.</p>
             </div>
             <div>
               <Icon name="shieldcheck" size={26}/>
-              <h3>Risk-aware</h3>
+              <h3><HeadingText text="Risk-aware"/></h3>
               <p>We teach thoughtful trade-offs — not promises of easy profits.</p>
             </div>
           </div>
@@ -98,7 +99,7 @@ export default function About() {
           <div className="founder-avatar"><Icon name="sparkles" size={65}/></div>
           <div>
             <span className="eyebrow"><span className="eyebrow-dot"/> MEET THE FOUNDER</span>
-            <h2>Maria Mediannikova</h2>
+            <h2><HeadingText text="Maria Mediannikova"/></h2>
             <p>
               AltRisk Academy was founded by{' '}
               <Link href="https://mariamediannikova.com/" target="_blank" rel="noopener noreferrer">Maria Mediannikova</Link>
@@ -117,7 +118,7 @@ export default function About() {
           <div className="section-heading">
             <div>
               <span className="eyebrow"><span className="eyebrow-dot"/> STUDENT INNOVATION</span>
-              <h2>Competitions &amp; Innovation Journey</h2>
+              <h2><HeadingText text="Competitions & Innovation Journey"/></h2>
               <p>
                 A look at the competitions AltRisk Academy is pursuing and exploring as the project
                 develops.
@@ -142,7 +143,7 @@ export default function About() {
                 </div>
                 <div className="competition-info">
                   <div className="competition-title-row">
-                    <h3>{competition.name}</h3>
+                    <h3><HeadingText text={competition.name}/></h3>
                     {competition.year && <span className="competition-year">{competition.year}</span>}
                   </div>
                   <span className={`competition-status competition-status-${competition.status.toLowerCase().replaceAll(' ', '-')}`}>

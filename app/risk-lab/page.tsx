@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { PageIntro, Cta } from '../../components/common';
+import {HeadingText} from '../../components/heading-text';
 import { Icon } from '../../components/icon';
 import {AnalyticsLink} from '../../components/analytics-link';
 import type {AnalyticsDifficulty, AnalyticsTopic} from '../../lib/analytics';
@@ -164,7 +165,7 @@ export default function RiskLab() {
               </div>
               <div className="module-body">
                 <span className="tiny-label">{m.cat}</span>
-                <h2>{m.name}</h2>
+                <h2><HeadingText text={m.name}/></h2>
                 <p>{m.desc}</p>
                 <span className="ara-learning-status">
                   <Icon name="check" size={14} /> {m.level} · Free simulation
@@ -174,11 +175,11 @@ export default function RiskLab() {
                   <span><Icon name="check" size={16} /> No real money</span>
                 </div>
                 <div className="ara-sim-extra">
-                  <h3>What you’ll do</h3>
+                  <h3><HeadingText text="What you’ll do"/></h3>
                   <ul>
                     {m.steps.map((step) => <li key={step}>{step}</li>)}
                   </ul>
-                  <h3 style={{ marginTop: 16 }}>Skills you’ll practice</h3>
+                  <h3 style={{ marginTop: 16 }}><HeadingText text="Skills you’ll practice"/></h3>
                   <p>{m.skills.join(' · ')}</p>
                   <p className="ara-method">
                     Tip: These tools use simplified learning scenarios, not personal investment recommendations.

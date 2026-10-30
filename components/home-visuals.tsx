@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import type {ReactNode} from 'react';
 import {Icon} from './icon';
+import {HeadingText} from './heading-text';
 
 type VisualSectionHeaderProps = {
   eyebrow: string;
@@ -22,7 +23,7 @@ export function VisualSectionHeader({
     <div className="visual-section-header">
       <div>
         <span className="eyebrow"><span className="eyebrow-dot"/>{eyebrow}</span>
-        <h2>{title}</h2>
+        <h2><HeadingText text={title}/></h2>
         {description && <p>{description}</p>}
       </div>
       {href && (
@@ -49,7 +50,7 @@ export function FeatureCard({
     <article className={`home-feature-card home-feature-card-${tone}`}>
       <span className="home-feature-icon"><Icon name={icon} size={20}/></span>
       <div>
-        <h3>{title}</h3>
+        <h3><HeadingText text={title}/></h3>
         <p>{children}</p>
       </div>
     </article>
@@ -77,7 +78,7 @@ export function EducationalIllustrationCard({
     <figure className={`educational-illustration-card ${className}`.trim()}>
       <div className="educational-illustration-heading">
         <span>{eyebrow}</span>
-        <h3>{title}</h3>
+        <h3><HeadingText text={title}/></h3>
       </div>
       {src && alt ? (
         <Image
@@ -144,7 +145,7 @@ export function VideoPreview() {
         <div className="home-video-art-grid" aria-hidden="true"/>
         <div className="video-preview-panel">
           <span className="video-preview-kicker">ALTRISK ACADEMY · INTRODUCTION</span>
-          <h3>Understand the risk.<br/><span>Explore your choices.</span></h3>
+          <h3><span className="heading-sentence">Understand the risk.</span><span className="heading-sentence video-preview-heading-accent">Explore your choices</span></h3>
           <div className="video-preview-flow" aria-hidden="true">
             <span><Icon name="target" size={17}/></span><i/>
             <span><Icon name="compass" size={17}/></span><i/>

@@ -3,6 +3,7 @@
 import {useEffect, useRef, useState} from 'react';
 import {setGoogleAnalyticsDisabled} from './google-analytics';
 import {analyticsConsentEvent, analyticsConsentStorageKey} from '../lib/analytics';
+import {HeadingText} from './heading-text';
 
 type ConsentChoice = 'granted' | 'denied' | null;
 
@@ -110,7 +111,7 @@ export function PrivacyConsentBanner() {
       aria-describedby="privacy-consent-description"
     >
       <div className="privacy-consent-copy">
-        <h2>Your Privacy Matters</h2>
+        <h2><HeadingText text="Your Privacy Matters"/></h2>
         <p id="privacy-consent-description">
           We use optional analytics cookies to understand how visitors use AltRisk Academy and
           improve our educational resources. You can accept or decline analytics cookies. Your

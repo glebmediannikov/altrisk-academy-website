@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import {Icon} from './icon';
 import type {Article} from '../lib/hub-articles';
+import {HeadingText} from './heading-text';
 
 export function ArticleDirectory({articles}: {articles: Article[]}) {
   const [selectedCategory, setSelectedCategory] = useState('All');
@@ -67,7 +68,7 @@ export function ArticleDirectory({articles}: {articles: Article[]}) {
               <span className="tiny-label">
                 {article.category.toUpperCase()} · {article.read.toUpperCase()} READ
               </span>
-              <h3>{article.title}</h3>
+              <h3><HeadingText text={article.title}/></h3>
               <p>{article.excerpt}</p>
               <span className="text-link">
                 Read article <Icon name="arrow" size={16} />
