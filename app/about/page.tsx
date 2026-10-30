@@ -31,20 +31,20 @@ const competitions = [
   {
     name: 'Diamond Challenge',
     year: '2027',
-    status: 'Application in Progress',
+    status: 'Submitted',
     description: 'A student entrepreneurship competition centered on developing innovative venture ideas.',
   },
   {
     name: 'Blue Ocean Student Entrepreneur Competition',
     year: '2027',
-    status: 'Preparing',
+    status: 'Submitted',
     description: 'A student competition encouraging entrepreneurial ideas that address real-world needs.',
     image: '/competitions/blue-ocean.webp',
   },
   {
     name: 'SCI Youth Grant Pitch Contest',
     year: '',
-    status: 'Exploring',
+    status: 'Submitted',
     description: 'A youth-focused grant pitch opportunity for science and innovation projects.',
     image: '/competitions/sci-youth-grant.jpg',
   },
