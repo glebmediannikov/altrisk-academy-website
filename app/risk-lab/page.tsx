@@ -12,7 +12,7 @@ export const metadata: Metadata = pageMetadata({
   path: '/risk-lab',
   title: 'Interactive Risk Lab & Financial Simulators',
   description:
-    'Practice risk management through free interactive financial, green investing, and sustainable living simulations.',
+    'Practice risk management through free interactive financial, green investing, sustainable living, and civic budgeting simulations.',
 });
 
 const modules = [
@@ -132,6 +132,26 @@ const modules = [
     ],
     skills: ['Lifecycle cost', 'Energy decisions', 'Sustainability trade-offs'],
   },
+  {
+    name: 'Community Budget Lab',
+    cat: 'CIVIC FINANCE · COMMUNITY DECISIONS',
+    desc: 'Explore how cities and towns allocate public funds. Adjust spending priorities, balance municipal budgets, and discover the trade-offs behind community decisions.',
+    image: '/illustrations/risk-lab/community-budget.svg',
+    imageAlt: 'Illustration of a municipal building beside a community spending budget chart',
+    href: 'https://altrisk-budget-lab.streamlit.app/',
+    action: 'Open Community Budget Lab',
+    analyticsId: 'community-budget-lab',
+    analyticsTopic: 'risk_analytics',
+    analyticsDifficulty: 'beginner_intermediate',
+    level: 'Beginner / Intermediate',
+    steps: [
+      'Adjust municipal spending across education, public safety, infrastructure, and other services.',
+      'Compare scenarios using interactive charts, financial matrices, and 3D visualizations.',
+      'Explore budget risks and AI-assisted insights where available.',
+    ],
+    skills: ['Public budgeting', 'Financial trade-offs', 'Civic decision-making', 'Risk analysis'],
+    disclaimer: 'This tool currently uses illustrative municipal data and is not an official government budgeting platform.',
+  },
 ] satisfies Array<
   Record<string, unknown> & {
     analyticsTopic: AnalyticsTopic;
@@ -181,9 +201,13 @@ export default function RiskLab() {
                   </ul>
                   <h3 style={{ marginTop: 16 }}><HeadingText text="Skills you’ll practice"/></h3>
                   <p>{m.skills.join(' · ')}</p>
-                  <p className="ara-method">
-                    Tip: These tools use simplified learning scenarios, not personal investment recommendations.
-                  </p>
+                  {'disclaimer' in m && typeof m.disclaimer === 'string' ? (
+                    <p className="ara-method">{m.disclaimer}</p>
+                  ) : (
+                    <p className="ara-method">
+                      Tip: These tools use simplified learning scenarios, not personal investment recommendations.
+                    </p>
+                  )}
                 </div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14 }}>
                   {'learnHref' in m && m.learnHref && (

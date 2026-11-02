@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 600" role="img" aria-labelledby="t d" font-family="Arial, Helvetica, sans-serif">
+  <title id="t">Community budget priorities</title>
+  <desc id="d">A civic building beside a chart comparing municipal spending priorities.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f9fb"/>
+      <stop offset="1" stop-color="#e5f0f7"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="600" fill="url(#bg)"/>
+  <rect y="490" width="960" height="110" fill="#d7ebe0"/>
+
+  <g transform="translate(55 155)">
+    <rect x="0" y="185" width="340" height="160" rx="8" fill="#ffffff" stroke="#10233f" stroke-width="4"/>
+    <path d="M-20 190 L170 45 L360 190 Z" fill="#3b82c4" stroke="#10233f" stroke-width="4" stroke-linejoin="round"/>
+    <path d="M20 184 L170 75 L320 184 Z" fill="#ffffff"/>
+    <rect x="145" y="98" width="50" height="42" fill="#f2b441" stroke="#10233f" stroke-width="3"/>
+    <g fill="#dff1f7" stroke="#147d92" stroke-width="3">
+      <rect x="35" y="222" width="56" height="76" rx="4"/>
+      <rect x="112" y="222" width="56" height="76" rx="4"/>
+      <rect x="189" y="222" width="56" height="76" rx="4"/>
+      <rect x="266" y="222" width="42" height="76" rx="4"/>
+    </g>
+    <rect x="138" y="270" width="64" height="75" rx="4" fill="#f2b441" stroke="#10233f" stroke-width="3"/>
+    <path d="M-32 350 H372" stroke="#10233f" stroke-width="8" stroke-linecap="round"/>
+  </g>
+
+  <g transform="translate(465 52)">
+    <rect width="440" height="392" rx="22" fill="#ffffff" stroke="#d4e3e8" stroke-width="3"/>
+    <text x="30" y="52" font-size="29" font-weight="700" fill="#147d92">Community budget</text>
+    <text x="30" y="87" font-size="18" fill="#687b8a">Illustrative spending priorities</text>
+    <g font-size="19" fill="#10233f">
+      <text x="30" y="143">Education</text>
+      <text x="30" y="203">Public safety</text>
+      <text x="30" y="263">Infrastructure</text>
+      <text x="30" y="323">Other services</text>
+    </g>
+    <g>
+      <rect x="188" y="121" width="210" height="28" rx="14" fill="#e5edf1"/>
+      <rect x="188" y="121" width="166" height="28" rx="14" fill="#20a79c"/>
+      <rect x="188" y="181" width="210" height="28" rx="14" fill="#e5edf1"/>
+      <rect x="188" y="181" width="132" height="28" rx="14" fill="#3b82c4"/>
+      <rect x="188" y="241" width="210" height="28" rx="14" fill="#e5edf1"/>
+      <rect x="188" y="241" width="184" height="28" rx="14" fill="#f2b441"/>
+      <rect x="188" y="301" width="210" height="28" rx="14" fill="#e5edf1"/>
+      <rect x="188" y="301" width="106" height="28" rx="14" fill="#3fa66b"/>
+    </g>
+    <path d="M30 357 H410" stroke="#e5edf1" stroke-width="2"/>
+    <circle cx="43" cy="374" r="7" fill="#20a79c"/>
+    <text x="59" y="381" font-size="16" fill="#687b8a">Compare choices and trade-offs</text>
+  </g>
+
+  <g fill="#3fa66b">
+    <circle cx="431" cy="423" r="28"/>
+    <circle cx="911" cy="453" r="24"/>
+  </g>
+  <g fill="#10233f">
+    <rect x="426" y="445" width="10" height="42"/>
+    <rect x="907" y="471" width="9" height="24"/>
+  </g>
+</svg>
