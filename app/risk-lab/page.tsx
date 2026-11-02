@@ -3,6 +3,7 @@ import { PageIntro, Cta } from '../../components/common';
 import {HeadingText} from '../../components/heading-text';
 import { Icon } from '../../components/icon';
 import {AnalyticsLink} from '../../components/analytics-link';
+import {ModuleCarousel} from '../../components/module-carousel';
 import type {AnalyticsDifficulty, AnalyticsTopic} from '../../lib/analytics';
 import { APP_ACADEMY, APP_CALCULATOR } from '../../lib/data';
 import type { Metadata } from 'next';
@@ -168,7 +169,7 @@ export default function RiskLab() {
         description="The best way to understand risk is to experiment with it. Try hands-on learning tools with simulated money and situations."
       />
       <section className="container section section-tight">
-        <div className="module-grid">
+        <ModuleCarousel label="Risk Lab learning modules">
           {modules.map((m, i) => (
             <div className="module-card" key={m.name}>
               <div className="module-visual">
@@ -234,7 +235,7 @@ export default function RiskLab() {
               </div>
             </div>
           ))}
-        </div>
+        </ModuleCarousel>
         <p className="lab-disclaimer">
           <Icon name="help" size={17} /> Interactive tools open in a separate Streamlit app.
           For the two climate labs, you can read the lesson first or launch the simulator directly.
