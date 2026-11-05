@@ -5,7 +5,7 @@ import { Icon } from '../../components/icon';
 import {AnalyticsLink} from '../../components/analytics-link';
 import {ModuleCarousel} from '../../components/module-carousel';
 import type {AnalyticsDifficulty, AnalyticsTopic} from '../../lib/analytics';
-import { APP_ACADEMY, APP_CALCULATOR } from '../../lib/data';
+import { APP_CALCULATOR } from '../../lib/data';
 import type { Metadata } from 'next';
 import {pageMetadata} from '../../lib/seo';
 
@@ -23,8 +23,8 @@ const modules = [
     desc: 'Practice allocating a virtual starting amount, exploring trade-offs, and evaluating how decisions affect your plan.',
     image: '/illustrations/risk-lab/my-first-1000.svg',
     imageAlt: 'Virtual $1,000 split into savings, spending, and investing on a donut chart and allocation cards',
-    href: APP_ACADEMY,
-    action: 'Open My First $1,000',
+    href: 'https://altrisk-academy.streamlit.app/?lab=first-1000',
+    action: 'Launch Simulator',
     analyticsId: 'my-first-1000',
     analyticsTopic: 'financial_risk',
     analyticsDifficulty: 'beginner',
@@ -42,8 +42,8 @@ const modules = [
     desc: 'Explore asset allocation, portfolio exposure, and simulated market conditions in an interactive environment.',
     image: '/illustrations/risk-lab/investment-risk-lab.svg',
     imageAlt: 'Portfolio sandbox dashboard with an allocation donut, hypothetical growth paths, a risk gauge, and risk indicators',
-    href: APP_ACADEMY,
-    action: 'Open Investment Risk Lab',
+    href: 'https://altrisk-academy.streamlit.app/?lab=investment-risk',
+    action: 'Launch Simulator',
     analyticsId: 'investment-risk-lab',
     analyticsTopic: 'investing',
     analyticsDifficulty: 'beginner_intermediate',
@@ -61,8 +61,8 @@ const modules = [
     desc: 'See how unexpected expenses and changing circumstances can affect your financial choices.',
     image: '/illustrations/risk-lab/unexpected-events.svg',
     imageAlt: 'Car repair estimate beside an emergency fund and savings jar covering an unplanned expense',
-    href: APP_ACADEMY,
-    action: 'Open Unexpected Events',
+    href: 'https://altrisk-academy.streamlit.app/?lab=life-happens',
+    action: 'Launch Simulator',
     analyticsId: 'unexpected-events',
     analyticsTopic: 'everyday_risk',
     analyticsDifficulty: 'beginner',
