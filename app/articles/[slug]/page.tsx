@@ -283,7 +283,13 @@ export default async function Article({
                 </li>
               ))}
               <li>
-                <Link href="/risk-lab">Explore the interactive Risk Lab</Link>
+                {article.slug === 'portfolio-diversification' ? (
+                  <>Practice comparing allocations in the <Link href="/risk-lab">interactive Investment Risk Lab</Link>.</>
+                ) : article.slug === 'market-volatility' ? (
+                  <>Explore simulated market conditions in the <Link href="/risk-lab">interactive financial risk simulator</Link>.</>
+                ) : (
+                  <Link href="/risk-lab">Explore the interactive Risk Lab</Link>
+                )}
               </li>
             </ul>
           </section>
