@@ -11,9 +11,9 @@ import {pageMetadata} from '../../lib/seo';
 
 export const metadata: Metadata = pageMetadata({
   path: '/risk-lab',
-  title: 'Interactive Risk Lab & Financial Simulators',
+  title: 'Free Financial Risk Simulator for Students',
   description:
-    'Practice risk management through free interactive financial, green investing, sustainable living, and civic budgeting simulations.',
+    'Explore financial and investment risk with free interactive simulations. Learn about market volatility, portfolio diversification, and financial decision-making through AltRisk Academy.',
 });
 
 const modules = [
@@ -165,8 +165,8 @@ export default function RiskLab() {
     <>
       <PageIntro
         eyebrow="INTERACTIVE RISK LAB"
-        title="Practice decisions. Learn from outcomes."
-        description="The best way to understand risk is to experiment with it. Try hands-on learning tools with simulated money and situations."
+        title="Explore financial risk through interactive simulations."
+        description="Risk Lab helps students explore financial decisions and their consequences through free, hands-on tools using simulated money and situations."
       />
       <section className="container section section-tight">
         <ModuleCarousel label="Risk Lab learning modules">
@@ -247,6 +247,38 @@ export default function RiskLab() {
           Council’s 2025–2026 Climate Recommendations. AltRisk Academy is an independent
           educational project and is not an official Council or state platform.
         </p>
+        <section className="article-prose article-content-section" aria-labelledby="risk-education">
+          <h2 id="risk-education"><HeadingText text="Learn by exploring financial risk"/></h2>
+          <p>
+            Financial decisions involve trade-offs, uncertainty, and goals that may change over time.
+            Interactive financial literacy gives students a way to examine those choices without
+            committing real money. In My First $1,000, learners can consider how dividing a virtual
+            amount among spending, saving, and investing affects their options. Unexpected Events
+            invites them to think about how an unplanned expense might disrupt a financial plan.
+          </p>
+          <p>
+            For investment risk education, the Investment Risk Lab lets learners explore portfolio
+            allocations and simulated market conditions. Comparing choices can prompt questions
+            about market volatility and portfolio diversification: what happens when investments
+            are concentrated, and how might different holdings respond to a changing market?
+            Diversification can reduce some risks, but it cannot eliminate losses. The Green
+            Investing Lab offers another way to explore allocation and concentration in a
+            sustainable finance context.
+          </p>
+          <p>
+            Risk management for students starts with asking what assumptions a scenario uses,
+            what could go wrong, and what alternatives are available. The calculator, responsible
+            consumption activities, and community budget lab extend that practice to other
+            decisions. Simulations simplify reality and do not predict future results or provide
+            personal financial advice. Pair an activity with these lessons to explore the concepts
+            behind financial decision-making:
+          </p>
+          <ul className="article-resource-list">
+            <li><Link href="/articles/portfolio-diversification">Portfolio diversification explained</Link></li>
+            <li><Link href="/articles/market-volatility">Understanding market volatility</Link></li>
+            <li><Link href="/learn/financial-risk">Financial and investment risk learning path</Link></li>
+          </ul>
+        </section>
       </section>
       <Cta
         title="Learn the concept. Then test your thinking."
