@@ -185,7 +185,7 @@ export const articleEditorial: Record<string, ArticleEditorial> = {
   },
   'how-ai-is-transforming-risk-management': {
     directAnswer:
-      'AI can help analyze data and prioritize work, but its outputs remain uncertain and require task-specific testing, human accountability, and ongoing monitoring.',
+      'AI can support risk management by detecting unusual activity, modeling credit or market exposures, and assisting with scenarios. Outputs remain uncertain and require task-specific testing, human oversight, and ongoing monitoring.',
     coverImage: {
       src: `${directory}/ai-risk-cover.svg`,
       alt: 'A governed AI risk workflow moving from data and model assessment through human review and monitoring.',
