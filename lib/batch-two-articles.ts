@@ -263,6 +263,7 @@ export const batchTwoArticles: Article[] = [
         paragraphs: [
           'Map how an instruction moves from strategy code to an execution venue: who creates it, which system validates it, where it is routed, how fills and cancels return, and which positions and limits are updated. Identify every path, including manual entry, alternate routes, and recovery procedures. A control that covers one interface but not another can leave a blind spot. The map should name system owners, data dependencies, and the person authorized to change or disable a control.',
           'Common pre-trade checks include authorized account and instrument, order size, notional value, price bands, position or credit limits, duplicate-order detection, and market-state checks. A check should specify what data it uses, how current that data must be, and what happens if the data or control service is unavailable. The thresholds are firm-specific examples of sound design; they are not universal regulatory limits. Controls should be proportionate to the strategy and the potential impact of a failure.',
+          'Depending on the account and arrangement, controls can also check available buying power or margin and restrict orders in instruments the account is not permitted to trade. A price collar compares an order price with a reference to catch potentially erroneous orders; a maximum order size limits the quantity in a single order. Some systems also limit orders or messages over a period, rather than relying only on a per-order limit. These examples are not identical at every broker: the measures, thresholds, reference prices, and handling of exceptions depend on the firm and applicable requirements.',
         ],
       },
       {
@@ -337,6 +338,11 @@ export const batchTwoArticles: Article[] = [
         title: 'Market Access',
         publisher: 'Financial Industry Regulatory Authority',
         url: 'https://www.finra.org/rules-guidance/key-topics/market-access',
+      },
+      {
+        title: '2026 FINRA Annual Regulatory Oversight Report: Market Access Rule',
+        publisher: 'Financial Industry Regulatory Authority',
+        url: 'https://www.finra.org/rules-guidance/guidance/reports/2026-finra-annual-regulatory-oversight-report/market-access-rule',
       },
       {
         title: '17 CFR § 1.73: Clearing Futures Commission Merchant Risk Management',

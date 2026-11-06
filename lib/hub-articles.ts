@@ -109,6 +109,8 @@ const firstEditorialBatch: Article[] = [
   {
     slug: 'how-ai-is-transforming-risk-management',
     title: 'How AI Is Transforming Risk Management',
+    seoDescription:
+      'Explore how AI supports fraud detection, credit and market risk analysis, and scenarios, alongside model risk, data quality, and human oversight.',
     category: 'AI & Technology',
     read: '6 min',
     excerpt:
@@ -121,6 +123,7 @@ const firstEditorialBatch: Article[] = [
         paragraphs: [
           'A supervised model can classify transactions or cases using labeled examples; an anomaly-detection method can flag observations that differ from a learned or specified pattern. Natural-language tools can search documents, extract candidate terms, or summarize lengthy reports for human review. Generative AI can draft a scenario narrative or help an analyst query a controlled knowledge base. These are examples of potential assistance, not proof that any particular system is accurate or suitable.',
           'In financial crime operations, a model might rank activity for investigation. In market or operational risk, analytics could help identify changing relationships, unusual transactions, or emerging incident clusters. A useful deployment starts with a specific decision and a baseline: what work is currently done, what error types matter, how much delay is acceptable, and how performance will be measured. A faster model that misses critical cases may be worse than a slower existing process.',
+          'For credit risk, a predictive model might estimate the likelihood of missed payments using historical borrower data. Analysts still need to check whether the data represent current applicants and whether the model is appropriate and explainable for its use. In market risk, a model might flag an unusual change in a portfolio’s exposures for review. In scenario analysis, a generative tool could suggest a narrative, but analysts must check its assumptions and translate them into a coherent, independently reviewed test. None of these outputs establishes what will happen.',
           'AI can also change the organization’s own risk profile. A system may introduce privacy, cybersecurity, intellectual-property, vendor, conduct, model, or operational risks. Generative systems can produce plausible but unsupported responses, expose sensitive information through inappropriate inputs, or change behavior after an update. Risk teams should assess both the risks AI may help manage and the risks created by its use.',
         ],
       },
@@ -167,7 +170,7 @@ const firstEditorialBatch: Article[] = [
       'Human review is a designed control, not a guarantee that machine errors will be caught.',
       'NIST’s AI RMF is voluntary guidance; it does not replace applicable legal obligations.',
     ],
-    relatedArticles: ['model-risk-management-2026', 'what-does-a-risk-manager-do', 'risk-dashboards-real-time-exposure'],
+    relatedArticles: ['model-risk-management-2026', 'machine-learning-financial-risk-anomalies', 'stress-testing-explained', 'what-does-a-risk-manager-do', 'risk-dashboards-real-time-exposure'],
     learningPaths: ['cyber-risk', 'financial-risk'],
     sources: [
       {
@@ -185,17 +188,24 @@ const firstEditorialBatch: Article[] = [
         publisher: 'Board of Governors of the Federal Reserve System',
         url: 'https://www.federalreserve.gov/supervisionreg/srletters/SR2602.htm',
       },
+      {
+        title: 'Artificial Intelligence and Bank Supervision',
+        publisher: 'Federal Reserve Bank of Richmond',
+        url: 'https://www.richmondfed.org/publications/research/econ_focus/2023/q2_federal_reserve',
+      },
     ],
   },
   {
     slug: 'stress-testing-explained',
     title: 'Stress Testing Explained: How Financial Firms Prepare for Market Shocks',
+    seoDescription:
+      'Learn how financial stress testing uses adverse scenarios and sensitivity analysis to assess portfolio losses, funding pressure, and limitations.',
     category: 'Stress Testing',
     read: '7 min',
     excerpt:
       'Learn how scenario design, sensitivities, balance-sheet assumptions, and governance help firms understand severe but plausible outcomes.',
     introduction:
-      'Stress testing asks how a firm, portfolio, or financial system might behave under a specified adverse condition. It is a forward-looking analytical exercise, not a prediction that the scenario will occur. A test can reveal concentrations, funding pressure, capital needs, or operational dependencies that are hard to see in ordinary-period averages. The term covers many methods, from a one-variable sensitivity to a multi-year supervisory scenario.',
+      'Stress testing asks how a firm, portfolio, or financial system might behave under a specified adverse condition. Unlike a forecast of an expected outcome, it asks what could happen if a particular shock occurred; it does not predict that the scenario will occur. A test can reveal concentrations, funding pressure, capital needs, or operational dependencies that are hard to see in ordinary-period averages. The term covers many methods, from a one-variable sensitivity to a multi-year supervisory scenario.',
     sections: [
       {
         heading: 'Choose a question before choosing a scenario',
@@ -210,6 +220,7 @@ const firstEditorialBatch: Article[] = [
         paragraphs: [
           'The model chain may include balance-sheet projections, credit loss estimates, market valuation, net interest income, liquidity cash flows, and capital ratios. Inputs should be tied to data definitions and a stated date. Analysts record whether the balance sheet is static or changes under the scenario, whether management actions are allowed, and how customer behavior, maturities, hedges, and funding access are treated.',
           'A scenario’s final result depends on both the shock and the translation model. Validation should check whether data are complete, methods are reasonable for the portfolio, calculations work as intended, and limitations are understood. Independent challenge can test alternative assumptions, compare results with historical experience, and identify areas where evidence is weak. Results should not be presented with more precision than the assumptions support.',
+          'For example, a hypothetical portfolio worth $100,000 might be tested against a 10% fall in the value of all its holdings. Under that simplifying assumption, its estimated market loss is $10,000 and its remaining value is $90,000, before fees and other effects. A separate funding question is whether enough cash would be available when needed; selling an asset in a stressed market may take time or require a price concession. The assumed shock is not a forecast, and different holdings may not fall by the same percentage.',
           'Useful outputs include losses, liquidity shortfalls, capital ratios, limit usage, business-line contributions, and the timing of pressure. A single end-point number may hide an intraperiod cash shortfall or a concentration in one counterparty. Sensitivity runs can identify which assumptions drive results; reverse stress tests can show the combinations that would breach a defined threshold.',
         ],
       },
@@ -248,7 +259,7 @@ const firstEditorialBatch: Article[] = [
       'Sensitivity, scenario, and reverse stress tests answer different questions.',
       'Supervisory stress-test rules apply only to covered entities; internal practice and regulation are distinct.',
     ],
-    relatedArticles: ['risk-dashboards-real-time-exposure', 'what-does-a-risk-manager-do', 'model-risk-management-2026'],
+    relatedArticles: ['understanding-liquidity-risk', 'monte-carlo-simulation-financial-risk-management', 'risk-dashboards-real-time-exposure', 'what-does-a-risk-manager-do', 'model-risk-management-2026'],
     learningPaths: ['financial-risk', 'global-risk'],
     sources: [
       {
