@@ -221,17 +221,110 @@ export const lessons: Article[] = [
  ...foundationalArticles.map(enhanceArticle),
  ...hubArticles
 ];
-export const dictionary = [
- {term:'Asset Allocation',meaning:'How investments are distributed across categories such as stocks, bonds, and cash.'},
- {term:'Credit Risk',meaning:'The risk that a borrower will fail to repay money as agreed.'},
- {term:'Diversification',meaning:'Spreading exposure across different investments or sources of risk.'},
- {term:'Emergency Fund',meaning:'Money set aside to help cover unexpected expenses or income interruptions.'},
- {term:'Financial Risk',meaning:'The possibility of financial loss or an outcome that threatens a financial goal.'},
- {term:'Liquidity Risk',meaning:'The risk of being unable to sell an asset quickly without a significant price concession.'},
- {term:'Market Risk',meaning:'The risk of losses caused by broader changes in financial markets.'},
- {term:'Risk Appetite',meaning:'The amount and type of risk an individual or organization is willing to accept.'},
- {term:'Risk Management',meaning:'The process of identifying, assessing, responding to, and monitoring risks.'},
- {term:'Risk Tolerance',meaning:'How much uncertainty or loss a person can withstand while pursuing a goal.'},
- {term:'Scenario Analysis',meaning:'Exploring how different possible future conditions could affect a decision.'},
- {term:'Volatility',meaning:'The degree to which the price or return of an asset varies over time.'}
+export type DictionaryEntry = {
+  id: string;
+  term: string;
+  meaning: string;
+  example: string;
+  importance: string;
+  resource: {href: string; label: string};
+};
+
+export const dictionary: DictionaryEntry[] = [
+  {
+    id: 'asset-allocation',
+    term: 'Asset Allocation',
+    meaning: 'How investments are distributed across categories such as stocks, bonds, and cash.',
+    example: 'A hypothetical portfolio might hold 60% stocks and 40% bonds.',
+    importance: 'The mix affects how the portfolio responds to different market conditions.',
+    resource: {href: '/articles/portfolio-diversification', label: 'Read about portfolio diversification'},
+  },
+  {
+    id: 'credit-risk',
+    term: 'Credit Risk',
+    meaning: 'The risk that a borrower will fail to repay money or meet other obligations as agreed.',
+    example: 'A bond issuer could miss an interest payment.',
+    importance: 'A missed payment can cause a lender or investor to lose money.',
+    resource: {href: '/articles/what-is-financial-risk', label: 'Explore types of financial risk'},
+  },
+  {
+    id: 'diversification',
+    term: 'Diversification',
+    meaning: 'Spreading exposure across different investments or sources of risk.',
+    example: 'A portfolio may hold investments in several companies rather than just one.',
+    importance: 'It can reduce concentration risk, but it cannot eliminate losses.',
+    resource: {href: '/articles/portfolio-diversification', label: 'Learn how diversification works'},
+  },
+  {
+    id: 'emergency-fund',
+    term: 'Emergency Fund',
+    meaning: 'A cash reserve set aside for unexpected expenses or income interruptions.',
+    example: 'Savings set aside for an unexpected car repair are an emergency fund.',
+    importance: 'A reserve can help cover a surprise cost without disrupting other goals as much.',
+    resource: {href: '/articles/stress-test-personal-budget', label: 'Explore a personal budget stress test'},
+  },
+  {
+    id: 'financial-risk',
+    term: 'Financial Risk',
+    meaning: 'The possibility of financial loss or an outcome that threatens a financial goal.',
+    example: 'An investment could lose value before money is needed for a purchase.',
+    importance: 'Identifying the goal and possible loss helps make trade-offs clearer.',
+    resource: {href: '/articles/what-is-financial-risk', label: 'Learn about financial risk'},
+  },
+  {
+    id: 'liquidity-risk',
+    term: 'Liquidity Risk',
+    meaning: 'The risk of being unable to sell an asset or meet a cash obligation when needed without an unacceptable cost or delay.',
+    example: 'A seller may have to accept a lower price to sell an investment quickly.',
+    importance: 'A valuable asset does not always provide enough cash at the right time.',
+    resource: {href: '/articles/understanding-liquidity-risk', label: 'Understand liquidity risk'},
+  },
+  {
+    id: 'market-risk',
+    term: 'Market Risk',
+    meaning: 'The risk of losses caused by broader changes in financial markets.',
+    example: 'A broad decline in stock prices could reduce the value of many stock holdings.',
+    importance: 'Holding several investments does not necessarily remove exposure to a market-wide decline.',
+    resource: {href: '/articles/market-volatility', label: 'Explore market volatility'},
+  },
+  {
+    id: 'risk-appetite',
+    term: 'Risk Appetite',
+    meaning: 'The amount and type of risk an individual or organization is willing to accept in pursuit of a goal.',
+    example: 'A business may decide it has little appetite for interruptions to an essential service.',
+    importance: 'It helps guide choices about which risks to take or reduce.',
+    resource: {href: '/articles/what-does-a-risk-manager-do', label: 'See how risk managers use risk appetite'},
+  },
+  {
+    id: 'risk-management',
+    term: 'Risk Management',
+    meaning: 'The process of identifying, assessing, responding to, and monitoring risks.',
+    example: 'A student might identify an unexpected expense and consider how to prepare for it.',
+    importance: 'The process helps people consider options, although it cannot eliminate uncertainty.',
+    resource: {href: '/articles/personal-risk-management-plan', label: 'Build a personal risk management plan'},
+  },
+  {
+    id: 'risk-tolerance',
+    term: 'Risk Tolerance',
+    meaning: 'A person’s willingness and ability to withstand uncertainty or loss while pursuing a goal.',
+    example: 'Someone needing money soon may have less ability to absorb an investment loss.',
+    importance: 'Willingness to take risk and financial ability to bear it are not always the same.',
+    resource: {href: '/articles/risk-and-return', label: 'Read about risk and return'},
+  },
+  {
+    id: 'scenario-analysis',
+    term: 'Scenario Analysis',
+    meaning: 'Exploring how different possible future conditions could affect a decision.',
+    example: 'A student might compare a budget with normal income and with a temporary income drop.',
+    importance: 'It exposes assumptions and possible consequences without predicting what will happen.',
+    resource: {href: '/articles/stress-testing-explained', label: 'Learn about stress testing scenarios'},
+  },
+  {
+    id: 'volatility',
+    term: 'Volatility',
+    meaning: 'The degree to which an asset’s price or return varies over a period of time.',
+    example: 'A price that moves sharply up and down is more volatile than one with small movements over the same period.',
+    importance: 'Volatility describes the size of movements, not their direction or future returns.',
+    resource: {href: '/articles/market-volatility', label: 'Understand market volatility'},
+  },
 ];
