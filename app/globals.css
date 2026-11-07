@@ -348,3 +348,5 @@ h1,h2,h3{overflow-wrap:break-word}
 .module-carousel-track{scroll-behavior:auto}
 .module-carousel-arrow,.module-carousel-dot::after{transition:none}
 }
+.founder-detail.founder-photo-layout{max-width:900px;margin-inline:auto;grid-template-columns:minmax(0,1fr) 200px;gap:36px;padding-top:72px}
+@media(max-width:650px){.founder-detail.founder-photo-layout{grid-template-columns:1fr;gap:22px;padding-top:60px}}
