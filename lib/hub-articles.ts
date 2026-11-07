@@ -114,7 +114,7 @@ const firstEditorialBatch: Article[] = [
     category: 'AI & Technology',
     read: '6 min',
     excerpt:
-      'See where machine learning and generative AI can help risk teams—and why data quality, validation, oversight, and limits still matter.',
+      'See where machine learning and generative AI can help risk teams, and why data quality, validation, oversight, and limits still matter.',
     introduction:
       'Artificial intelligence is changing how some organizations detect patterns, summarize information, and support decisions. In risk management, AI can help analysts review more data or identify signals that deserve attention. It does not remove the need to define the risk, test the system, verify its outputs, and decide who is accountable. “AI” is also a broad label: a rules engine, a statistical machine-learning model, and a generative language model have different methods and failure modes.',
     sections: [
@@ -242,7 +242,7 @@ const firstEditorialBatch: Article[] = [
       {
         heading: 'Why This Matters for Risk Managers',
         paragraphs: [
-          'A stress test converts a risk narrative into a disciplined “what if?” analysis. It helps decision-makers examine whether resources, controls, and contingency plans would remain adequate when normal assumptions break. The value comes from credible scenarios, transparent limitations, and actions that are tracked—not from treating a model output as a precise forecast.',
+          'A stress test converts a risk narrative into a disciplined “what if?” analysis. It helps decision-makers examine whether resources, controls, and contingency plans would remain adequate when normal assumptions break. The value comes from credible scenarios, transparent limitations, and actions that are tracked, not from treating a model output as a precise forecast.',
         ],
       },
     ],
@@ -282,10 +282,12 @@ const firstEditorialBatch: Article[] = [
   {
     slug: 'risk-dashboards-real-time-exposure',
     title: 'Risk Dashboards: How Firms Monitor Exposure in Real Time',
+    seoDescription:
+      'Design a risk dashboard around decisions, trusted data, meaningful thresholds, and clear escalation—not visual volume.',
     category: 'Risk Reporting',
     read: '6 min',
     excerpt:
-      'Design a risk dashboard around decisions, trusted data, meaningful thresholds, and clear escalation—not visual volume.',
+      'Design a risk dashboard around decisions, trusted data, meaningful thresholds, and clear escalation, not visual volume.',
     introduction:
       'A risk dashboard is a reporting interface that helps people monitor selected exposures, indicators, limits, and control status. “Real time” is often used loosely: a dashboard may update every few seconds, hourly, overnight, or only when a source system publishes a new batch. The update interval must match the risk and the decisions users need to make. A visually polished display is not a control if its data are late, its measures ambiguous, or no one responds to an alert.',
     sections: [
