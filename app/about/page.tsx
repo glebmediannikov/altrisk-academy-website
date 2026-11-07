@@ -95,8 +95,7 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div id="founder" className="founder-detail">
-          <div className="founder-avatar"><Icon name="sparkles" size={65}/></div>
+        <div id="founder" className="founder-detail founder-photo-layout">
           <div>
             <span className="eyebrow"><span className="eyebrow-dot"/> MEET THE FOUNDER</span>
             <h2><HeadingText text="Maria Mediannikova"/></h2>
@@ -111,6 +110,14 @@ export default function About() {
               careers, and everyday life.
             </p>
           </div>
+          <Image
+            src="/images/maria-mediannikova-founder.jpeg"
+            alt="Portrait of Maria Mediannikova, founder of AltRisk Academy"
+            width={1066}
+            height={1600}
+            sizes="200px"
+            style={{width: '100%', maxWidth: 200, height: 'auto', borderRadius: 18}}
+          />
         </div>
       </section>
       <section className="section section-tinted">
