@@ -166,6 +166,7 @@ export default function RiskLab() {
   return (
     <>
       <PageIntro
+        className="risk-lab-intro"
         eyebrow="INTERACTIVE RISK LAB"
         title="Explore financial risk through interactive simulations."
         description="Risk Lab helps students explore financial decisions and their consequences through free, hands-on tools using simulated money and situations."

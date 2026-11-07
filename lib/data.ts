@@ -19,7 +19,7 @@ const foundationalArticles: Article[] = [
   sections:[
    {heading:'A practical way to describe risk',paragraphs:[
     'For a decision, start with three questions: What outcome am I trying to achieve? What could change or go wrong? If it did, how serious would the effect be? This connects uncertainty to consequences. A small chance of a very serious outcome may deserve attention, just as a frequent but minor inconvenience might be worth planning for.',
-    'In investing, FINRA describes risk as uncertainty that could negatively affect financial welfare. That is one useful financial definition. In everyday decisions, risk can also include lost time, a missed opportunity, or an outcome that falls short of a goal—not only a cash loss.'
+    'In investing, FINRA describes risk as uncertainty that could negatively affect financial welfare. That is one useful financial definition. In everyday decisions, risk can also include lost time, a missed opportunity, or an outcome that falls short of a goal, not only a cash loss.'
    ]},
    {heading:'Likelihood and impact are different questions',paragraphs:[
     'People often combine likelihood and impact into a single label such as “high risk.” It is more useful to consider them separately. Likelihood asks how plausible an event seems given available information. Impact asks what the event would mean if it happened. Those estimates are not facts about the future: they depend on assumptions, evidence, and the time period being considered.',
@@ -117,7 +117,7 @@ const foundationalArticles: Article[] = [
  {
   slug:'portfolio-diversification',title:'Portfolio Diversification Explained',category:'Investing',read:'7 min',
   excerpt:'Learn how spreading investments can reduce concentration in one holding while leaving market risk in place.',
-  introduction:'Diversification means spreading investments across and within categories instead of relying heavily on one holding or source of return. It is a way to manage concentration risk—not a promise that a portfolio will avoid losses. The central question is whether different holdings truly have different exposures or simply look different on a list.',
+  introduction:'Diversification means spreading investments across and within categories instead of relying heavily on one holding or source of return. It is a way to manage concentration risk, not a promise that a portfolio will avoid losses. The central question is whether different holdings truly have different exposures or simply look different on a list.',
   sections:[
    {heading:'What diversification can and cannot do',paragraphs:[
     'FINRA explains that diversification across asset classes and within them can reduce the risk of major losses linked to overemphasizing one security or asset class. It notes that how assets respond to economic events matters: holdings that move independently may provide more diversification than holdings that react similarly.',
@@ -150,8 +150,9 @@ const foundationalArticles: Article[] = [
  },
  {
   slug:'market-volatility',title:'What Is Market Volatility?',category:'Investing',read:'6 min',
-  excerpt:'Understand how price swings describe one part of investment risk—and what volatility does not tell you.',
-  introduction:'Market volatility describes how much prices move up and down over a period. A market or asset with larger swings is generally described as more volatile over that period. Volatility can attract attention, but it is a measure of movement—not a complete description of risk, value, or what will happen next.',
+  seoDescription:'Understand how price swings describe one part of investment risk—and what volatility does not tell you.',
+  excerpt:'Understand how price swings describe one part of investment risk, and what volatility does not tell you.',
+  introduction:'Market volatility describes how much prices move up and down over a period. A market or asset with larger swings is generally described as more volatile over that period. Volatility can attract attention, but it is a measure of movement, not a complete description of risk, value, or what will happen next.',
   sections:[
    {heading:'How to read a price movement',paragraphs:[
     'A price change needs a starting point and a time interval. If a hypothetical share price moves from $50 to $55, the change is $5, or 10% of the starting price. If it later moves from $55 back to $50, the percentage decline is about 9.1% of $55. The dollar change is the same, but the percentage differs because the starting values differ.',

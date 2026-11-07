@@ -53,14 +53,14 @@ export const batchTwoArticles: Article[] = [
       {
         heading: '5. Make the analysis reproducible and reviewable',
         paragraphs: [
-          'A practical analysis records code versions, input identifiers, run parameters, and outputs so a reviewer can understand how a result was produced. A fixed random seed can make a Monte Carlo exercise reproducible for testing, while production analysis should also record the random-number generator and configuration. Version control, small functions, tests for known calculations, peer review, and separation of development from approved production use are recommended engineering practices—not universal regulatory requirements for every Python script.',
+          'A practical analysis records code versions, input identifiers, run parameters, and outputs so a reviewer can understand how a result was produced. A fixed random seed can make a Monte Carlo exercise reproducible for testing, while production analysis should also record the random-number generator and configuration. Version control, small functions, tests for known calculations, peer review, and separation of development from approved production use are recommended engineering practices, not universal regulatory requirements for every Python script.',
           'A notebook can be helpful for exploration because it combines narrative and calculations, but it can hide execution-order problems or depend on an analyst’s local environment. For recurring or consequential use, move stable logic into reviewed code, pin dependencies, control access, and retain a reproducible run record. Supervisory and model-governance obligations depend on the organization, the use of the tool, and applicable rules; using Python alone does not determine whether a program is a regulated model.',
         ],
       },
       {
         heading: 'Why This Matters for Risk Managers',
         paragraphs: [
-          'Python can help a risk team spend less time repeating manual steps and more time investigating concentrations, challenging assumptions, and explaining uncertainty. Its value comes from traceability: a reviewer should be able to follow a result back to its inputs and logic. Risk managers should treat scripts as part of a controlled analytical process, with owners, checks, documentation, and escalation—not as an independent source of truth.',
+          'Python can help a risk team spend less time repeating manual steps and more time investigating concentrations, challenging assumptions, and explaining uncertainty. Its value comes from traceability: a reviewer should be able to follow a result back to its inputs and logic. Risk managers should treat scripts as part of a controlled analytical process, with owners, checks, documentation, and escalation, not as an independent source of truth.',
         ],
       },
       {
@@ -130,7 +130,7 @@ export const batchTwoArticles: Article[] = [
     category: 'Risk Analytics',
     read: '8 min',
     excerpt:
-      'Learn how simulated scenarios can estimate a range of possible portfolio outcomes—and why the model is only as useful as its assumptions.',
+      'Learn how simulated scenarios can estimate a range of possible portfolio outcomes, and why the model is only as useful as its assumptions.',
     introduction:
       'Monte Carlo simulation estimates a range of possible outcomes by repeatedly generating values from specified probability models and recalculating the result. In financial risk work, those recalculations can represent portfolio values, losses, cash needs, or capital under uncertainty. Simulation does not reveal what will happen; it shows what follows if the modeled distributions, relationships, and portfolio representation are reasonable enough for the question being asked.',
     coverImage: {
@@ -178,7 +178,7 @@ export const batchTwoArticles: Article[] = [
         heading: 'Common mistakes and practical takeaways',
         paragraphs: [
           'Common errors include treating simulated paths as independent when the process has time dependence, using a convenient distribution without testing alternatives, assuming correlations remain fixed, interpreting a percentile as a worst case, and reporting excess decimal precision. A simulation may also understate risk if it models liquid prices but ignores the cost or time required to close positions. Explain the horizon, confidence level, valuation method, and excluded risks in plain language.',
-          'Use simulation alongside—not instead of—historical analysis, stress scenarios, sensitivity checks, and expert review. Make the output reproducible, show whether estimates move materially when assumptions change, and define an escalation process for unexpected results. Regulatory expectations depend on the institution, model, and applicable framework; the methods described here are analytical practices, not a universal rule that every organization must use Monte Carlo.',
+          'Use simulation alongside historical analysis, stress scenarios, sensitivity checks, and expert review, not instead of them. Make the output reproducible, show whether estimates move materially when assumptions change, and define an escalation process for unexpected results. Regulatory expectations depend on the institution, model, and applicable framework; the methods described here are analytical practices, not a universal rule that every organization must use Monte Carlo.',
         ],
       },
     ],
@@ -477,7 +477,7 @@ export const batchTwoArticles: Article[] = [
     category: 'AI & Technology',
     read: '8 min',
     excerpt:
-      'Explore how anomaly detection surfaces unusual patterns in financial data—and why human review, context, and model governance still matter.',
+      'Explore how anomaly detection surfaces unusual patterns in financial data, and why human review, context, and model governance still matter.',
     introduction:
       'An anomaly-detection model looks for observations that differ from a learned pattern or a defined baseline. In financial risk, unusual payments, trading activity, account behavior, or operational events can merit investigation. “Unusual” does not mean fraudulent, unsafe, or incorrect: it means a pattern deserves context. The method is a signal for triage, not a verdict, and its usefulness depends on data quality, review capacity, and how the organization responds.',
     coverImage: {
@@ -554,7 +554,7 @@ export const batchTwoArticles: Article[] = [
     },
     keyTakeaways: [
       'An anomaly score is a prompt for investigation, not proof of fraud or a calibrated probability by default.',
-      'Measure false positives, missed events, review capacity, and changes in data—not accuracy alone.',
+      'Measure false positives, missed events, review capacity, and changes in data, not accuracy alone.',
       'Define human oversight, escalation, privacy, validation, and ongoing monitoring before deployment.',
     ],
     relatedArticles: [
@@ -595,7 +595,7 @@ export const batchTwoArticles: Article[] = [
     category: 'Risk Analytics',
     read: '8 min',
     excerpt:
-      'Compare what value at risk and expected shortfall reveal about losses beyond a percentile—and what neither measure can tell you alone.',
+      'Compare what value at risk and expected shortfall reveal about losses beyond a percentile, and what neither measure can tell you alone.',
     introduction:
       'Value at risk (VaR) and expected shortfall (ES) summarize different aspects of a loss distribution. VaR identifies a loss threshold at a chosen confidence level and horizon. ES estimates the average loss in the tail beyond that threshold under a specified convention. ES can convey more about tail severity, but it is not automatically more accurate or sufficient; both measures depend on data, model choices, and clear definitions.',
     coverImage: {
@@ -606,7 +606,7 @@ export const batchTwoArticles: Article[] = [
     },
     sections: [
       {
-        heading: 'What VaR says—and what it leaves out',
+        heading: 'What VaR says and what it leaves out',
         paragraphs: [
           'A VaR statement needs a confidence level, time horizon, portfolio definition, and method. A one-day 95% VaR of $100,000 means that, under the model and assumptions used, the estimated loss threshold is $100,000 at the 95th percentile. In the model, losses exceed that threshold in roughly 5% of outcomes. It does not mean the maximum loss is $100,000, that a loss will occur only once in every 20 days, or that the estimate is reliable without validation.',
           'VaR is intuitive as a threshold, but it says little about how large losses may be after the threshold is crossed. Two portfolios can have the same VaR and very different tails. The result can also be sensitive to the confidence level, the sample, and the estimation method. Historical simulation, parametric assumptions, and Monte Carlo models can produce different answers because they represent uncertainty differently.',

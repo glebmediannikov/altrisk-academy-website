@@ -119,7 +119,7 @@ export const batchThreeArticles: Article[] = [
       src: `${imageDirectory}/cyber-basics-cover.svg`,
       alt: 'Three cybersecurity habits: a strong login with two-step verification, spotting phishing, and keeping a backup copy of data.',
       caption:
-        'Three everyday habits—strong logins, phishing awareness, and backups—address many common digital risks.',
+        'Three everyday habits help address many common digital risks: strong logins, phishing awareness, and backups.',
     },
     illustrations: [
       {

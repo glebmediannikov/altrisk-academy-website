@@ -51,7 +51,7 @@ export default function Home() {
             </div>
             <h1>Make sense of uncertainty. <span>Make more informed decisions</span></h1>
             <p className="home-hero-lede">
-              Learn how risk shapes money, careers, technology, and everyday choices—then practice
+              Learn how risk shapes money, careers, technology, and everyday choices. Then practice
               thinking it through in a safe, educational setting.
             </p>
             <div className="home-hero-actions">
@@ -105,7 +105,7 @@ export default function Home() {
                 <span><i/> Objective</span><span><i/> Uncertainty</span><span><i/> Informed action</span>
               </div>
             </div>
-            <p className="hero-art-caption">A learning framework—not a prediction about what will happen.</p>
+            <p className="hero-art-caption">A learning framework, not a prediction about what will happen.</p>
           </div>
         </div>
       </section>
@@ -178,7 +178,7 @@ export default function Home() {
           <VisualSectionHeader
             eyebrow="THE INTERACTIVE RISK LAB"
             title="Try a decision in a safe, simulated setting."
-            description="Explore simplified educational tools using virtual money and scenarios. They are designed for learning—not personalized advice or predictions."
+            description="Explore simplified educational tools using virtual money and scenarios. They are designed for learning, not personalized advice or predictions."
             href="/risk-lab"
             action="Visit Risk Lab"
           />
@@ -304,7 +304,7 @@ export default function Home() {
               <li><span>B</span> Check what changed and what did not</li>
               <li><span>C</span> Compare choices before reacting</li>
             </ul>
-            <p>Example prompt—not a recommendation or a live market event.</p>
+            <p>Example prompt, not a recommendation or a live market event.</p>
           </div>
         </div>
       </section>

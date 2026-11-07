@@ -54,18 +54,19 @@ export default function About() {
   return (
     <>
       <PageIntro
+        className="about-page-intro"
         eyebrow="OUR MISSION"
         title="Risk education for the next generation."
-        description="We believe students should learn how to understand risk before making decisions that shape their financial futures — and beyond."
+        description="We believe students should learn how to understand risk before making decisions that shape their financial futures and other areas of life."
       />
-      <section className="container section section-tight">
+      <section className="container section section-tight about-founder-section">
         <div className="about-grid">
           <div className="content-card">
             <span className="tiny-label">WHAT WE BELIEVE</span>
             <h2><HeadingText text="Real learning starts with better questions."/></h2>
             <p>
               Traditional financial education often focuses on saving, budgeting, and investing.
-              AltRisk Academy goes further — inviting students to consider uncertainty, potential
+              AltRisk Academy goes further, inviting students to consider uncertainty, potential
               losses, and consequences before they act.
             </p>
             <p>
@@ -91,7 +92,7 @@ export default function About() {
             <div>
               <Icon name="shieldcheck" size={26}/>
               <h3><HeadingText text="Risk-aware"/></h3>
-              <p>We teach thoughtful trade-offs — not promises of easy profits.</p>
+              <p>We teach thoughtful trade-offs, not promises of easy profits.</p>
             </div>
           </div>
         </div>
@@ -120,7 +121,7 @@ export default function About() {
           />
         </div>
       </section>
-      <section className="section section-tinted">
+      <section className="section section-tinted about-competition-section">
         <div className="container competition-section">
           <div className="section-heading">
             <div>

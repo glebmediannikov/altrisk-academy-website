@@ -348,5 +348,14 @@ h1,h2,h3{overflow-wrap:break-word}
 .module-carousel-track{scroll-behavior:auto}
 .module-carousel-arrow,.module-carousel-dot::after{transition:none}
 }
-.founder-detail.founder-photo-layout{max-width:900px;margin-inline:auto;grid-template-columns:minmax(0,1fr) 200px;gap:36px;padding-top:72px}
-@media(max-width:650px){.founder-detail.founder-photo-layout{grid-template-columns:1fr;gap:22px;padding-top:60px}}
+.founder-detail.founder-photo-layout{max-width:900px;margin-inline:auto;grid-template-columns:minmax(0,1fr) 200px;gap:36px;padding-top:48px}
+@media(max-width:650px){.founder-detail.founder-photo-layout{grid-template-columns:1fr;gap:22px;padding-top:40px}}
+.about-page-intro h1{max-width:1050px}
+@supports (text-wrap:balance){h1,h2,h3{text-wrap:balance}}
+.page-intro+.section-tight{padding-top:8px}
+.risk-lab-intro{padding-bottom:8px}
+.risk-lab-intro>p{margin-bottom:0}
+.risk-lab-intro+section.section-tight{padding-top:0}
+.about-founder-section{padding-bottom:48px}
+.about-competition-section{padding-top:64px}
+@media(max-width:650px){.about-founder-section{padding-bottom:40px}.about-competition-section{padding-top:48px}}
