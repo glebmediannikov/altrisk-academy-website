@@ -53,6 +53,8 @@ export default function Educators() {
             Teachers can use these free resources with high school or college students to introduce
             financial literacy and risk awareness. Start with <Link href="/articles/what-is-risk" style={inlineLinkStyle}>What Is Risk?</Link>{' '}
             and ask students to identify a goal, an uncertain event, and its possible impact.
+            The <Link href="/dictionary" style={inlineLinkStyle}>financial risk dictionary</Link>{' '}
+            provides concise definitions and examples for discussion.
             The <Link href="/learn/financial-risk" style={inlineLinkStyle}>financial and investment risk learning path</Link>{' '}
             offers further introductory reading on financial decisions and investing.
           </p>

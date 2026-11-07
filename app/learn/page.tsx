@@ -43,7 +43,8 @@ export default function Learn() {
             choices are available if the outcome is different from what you expect? The lessons
             below introduce risk and uncertainty before moving into topics such as investment
             risk, diversification, and market volatility. You can read them in order or choose
-            the topic that fits your interests.
+            the topic that fits your interests. Look up unfamiliar concepts in the{' '}
+            <Link href="/dictionary" style={inlineLinkStyle}>risk dictionary</Link>.
           </p>
           <p>
             Begin with the Financial &amp; Investment Risk path or a foundational article. As you
