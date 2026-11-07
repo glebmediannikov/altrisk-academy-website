@@ -38,7 +38,7 @@ export default function ResponsibleConsumption() {
       <ul><li>Solar installation costs versus ongoing utility bills.</li><li>Upfront lighting expenses versus electricity savings.</li><li>Transportation alternatives and long-term operating expenses.</li><li>Buying, repairing, and replacing consumer products.</li></ul>
       <h2><HeadingText text="Launch the interactive lab"/></h2>
       <p><a className="button" href={labUrl} target="_blank" rel="noopener noreferrer">Open Responsible Consumption Lab ↗</a></p>
-      <p>Continue with the <Link href="/risk-lab">full Risk Lab</Link> or browse <Link href="/for-educators">classroom resources</Link>.</p>
+      <p>Continue with the <Link href="/risk-lab">full Risk Lab</Link>, explore <Link href="/articles/stress-test-personal-budget">stress testing a personal budget</Link>, or browse <Link href="/for-educators">classroom resources</Link>.</p>
       <h2><HeadingText text="Frequently asked questions"/></h2>
       {faq.map(item => <section key={item.q}><h3><HeadingText text={item.q}/></h3><p>{item.a}</p></section>)}
       <p className="lab-disclaimer">Educational estimates only; not a household quote, engineering assessment, or guarantee of environmental savings.</p>

@@ -259,7 +259,7 @@ const firstEditorialBatch: Article[] = [
       'Sensitivity, scenario, and reverse stress tests answer different questions.',
       'Supervisory stress-test rules apply only to covered entities; internal practice and regulation are distinct.',
     ],
-    relatedArticles: ['understanding-liquidity-risk', 'monte-carlo-simulation-financial-risk-management', 'risk-dashboards-real-time-exposure', 'what-does-a-risk-manager-do', 'model-risk-management-2026'],
+    relatedArticles: ['understanding-liquidity-risk', 'monte-carlo-simulation-financial-risk-management', 'risk-dashboards-real-time-exposure', 'what-does-a-risk-manager-do', 'model-risk-management-2026', 'var-vs-expected-shortfall'],
     learningPaths: ['financial-risk', 'global-risk'],
     sources: [
       {
@@ -421,7 +421,7 @@ const firstEditorialBatch: Article[] = [
       'Broker-dealer governance, control authority, written procedures, review, and certification are important parts of the program.',
       'Hypothetical limits and configurations in examples are not SEC-prescribed thresholds.',
     ],
-    relatedArticles: ['risk-dashboards-real-time-exposure', 'what-does-a-risk-manager-do', 'stress-testing-explained'],
+    relatedArticles: ['risk-dashboards-real-time-exposure', 'what-does-a-risk-manager-do', 'stress-testing-explained', 'algorithmic-trading-risk-controls-explained'],
     learningPaths: ['financial-risk'],
     sources: [
       {

@@ -209,7 +209,7 @@ const foundationalArticles: Article[] = [
    'Compare returns over matching periods and disclose fees, taxes, cash flows, and inflation assumptions.',
    'Return alone cannot describe risk or determine whether an investment is appropriate for a goal.'
   ],
-  relatedArticles:['market-volatility','portfolio-diversification','what-is-financial-risk'],
+  relatedArticles:['market-volatility','portfolio-diversification','what-is-financial-risk','behavioral-biases-financial-decisions'],
   learningPaths:['financial-risk'],
   sources:[
    {title:'Risk — FINRA: Investing Basics',publisher:'FINRA',url:'https://www.finra.org/investors/investing/investing-basics/risk'},

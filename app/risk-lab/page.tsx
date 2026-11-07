@@ -101,6 +101,7 @@ const modules = [
     imageAlt: 'Solar panels and wind turbines on green hills beside a diversified green basket card',
     href: 'https://altrisk-academy.streamlit.app/?lab=green-investing',
     learnHref: '/green-investing',
+    learnLabel: 'Green investing',
     action: 'Launch Simulator',
     analyticsId: 'green-investing-lab',
     analyticsTopic: 'sustainable_finance',
@@ -121,6 +122,7 @@ const modules = [
     imageAlt: 'House with rooftop solar, an electric car, a bicycle, and a checklist of sustainable choices',
     href: 'https://altrisk-academy.streamlit.app/?lab=responsible-consumption',
     learnHref: '/responsible-consumption',
+    learnLabel: 'Sustainable living',
     action: 'Launch Simulator',
     analyticsId: 'responsible-consumption-lab',
     analyticsTopic: 'sustainable_living',
@@ -213,7 +215,7 @@ export default function RiskLab() {
                 <div style={{ display: 'flex', flexWrap: 'wrap', alignItems: 'center', gap: 14 }}>
                   {'learnHref' in m && m.learnHref && (
                     <Link className="button" href={m.learnHref}>
-                      Learn &amp; Explore <Icon name="arrow" size={17} />
+                      {m.learnLabel} <Icon name="arrow" size={17} />
                     </Link>
                   )}
                   <AnalyticsLink
@@ -270,7 +272,8 @@ export default function RiskLab() {
             what could go wrong, and what alternatives are available. The calculator, responsible
             consumption activities, and community budget lab extend that practice to other
             decisions. Simulations simplify reality and do not predict future results or provide
-            personal financial advice. Pair an activity with these lessons to explore the concepts
+            personal financial advice. Use the <Link href="/dictionary" style={{color: 'var(--teal)', textDecoration: 'underline', textUnderlineOffset: '3px'}}>financial risk dictionary</Link>{' '}
+            to review unfamiliar terms. Pair an activity with these lessons to explore the concepts
             behind financial decision-making:
           </p>
           <ul className="article-resource-list">
