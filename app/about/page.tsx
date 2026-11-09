@@ -13,7 +13,27 @@ export const metadata: Metadata = pageMetadata({
     'Meet AltRisk Academy and its founder, Maria Mediannikova, a student and financial literacy advocate.',
 });
 
-const competitions = [
+type Competition = {
+  name: string;
+  year: string;
+  status: string;
+  description: string;
+  image?: string;
+  url?: string;
+  logoClass?: string;
+};
+
+const competitions: Competition[] = [
+  {
+    name: 'MIT THINK Scholars Program',
+    year: '2026–2027',
+    status: 'Submitted',
+    description:
+      'Submitted a research proposal for the MIT THINK Scholars Program, presenting a Climate-Adjusted Portfolio Risk Model that explores how climate-related risks can be incorporated into investment portfolio analysis.',
+    image: '/competitions/mit-think-card.png',
+    url: 'https://think.mit.edu/',
+    logoClass: 'competition-logo-mit-think',
+  },
   {
     name: 'Congressional App Challenge',
     year: '2026',
@@ -136,7 +156,7 @@ export default function About() {
           <div className="competition-list">
             {competitions.map((competition) => (
               <article className="competition-card" key={competition.name}>
-                <div className={`competition-logo${competition.image ? '' : ' competition-logo-placeholder'}`}>
+                <div className={`competition-logo${competition.image ? '' : ' competition-logo-placeholder'}${competition.logoClass ? ` ${competition.logoClass}` : ''}`}>
                   {competition.image ? (
                     <Image
                       src={competition.image}
@@ -151,7 +171,15 @@ export default function About() {
                 </div>
                 <div className="competition-info">
                   <div className="competition-title-row">
-                    <h3><HeadingText text={competition.name}/></h3>
+                    <h3>
+                      {competition.url ? (
+                        <a href={competition.url} target="_blank" rel="noopener noreferrer">
+                          <HeadingText text={competition.name}/>
+                        </a>
+                      ) : (
+                        <HeadingText text={competition.name}/>
+                      )}
+                    </h3>
                     {competition.year && <span className="competition-year">{competition.year}</span>}
                   </div>
                   <span className={`competition-status competition-status-${competition.status.toLowerCase().replaceAll(' ', '-')}`}>

@@ -1,3 +1,8 @@
+mit-think
+  public\competitions\mit-think-card.png
+  Card artwork composed from the official MIT THINK wordmark with a separate MIT identifier.
+  https://think.mit.edu/images/logo_updated.svg
+
 congressional-app-challenge
   public\competitions\congressional-app-challenge.webp
   https://images.squarespace-cdn.com/content/v1/63125c822016031acb8ce16a/1693591856167-P1AIA175FK3ADFVCROGH/Logo%2Bwith%2BDome%2B%28Transparent%29_0.png?format=2500w
