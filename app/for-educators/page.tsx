@@ -1,5 +1,6 @@
-import Link from 'next/link';
-import {PageIntro, Cta} from '../../components/common';
+﻿import Link from 'next/link';
+import Image from 'next/image';
+import {PageIntro} from '../../components/common';
 import {Icon} from '../../components/icon';
 import type {Metadata} from 'next';
 import {pageMetadata} from '../../lib/seo';
@@ -13,16 +14,41 @@ export const metadata: Metadata = pageMetadata({
     'Discover free financial literacy resources, interactive risk simulations, and educational activities for teachers and high school students at AltRisk Academy.',
 });
 
+const MASIC_LOGO_SRC = '/partners/masic-logo.png';
+const MASIC_URL = 'https://www.masicinfo.org/';
+// Existing public contact channel (see organization schema in app/layout.tsx).
+const CONTACT_URL = 'https://www.linkedin.com/company/altriskacademy/';
+
+const useCases = [
+  {icon: 'book', title: 'For Teachers', text: 'Bring risk concepts into classroom discussions through accessible, interactive activities.'},
+  {icon: 'graduation', title: 'For Student Clubs', text: 'Use financial simulations, group discussions, and practical exercises during financial literacy or investment club meetings.'},
+  {icon: 'cursor', title: 'Interactive Learning', text: 'Explore investment risk, financial choices, and real-world decision-making through AltRisk Academy\u2019s existing learning labs.'},
+  {icon: 'heart', title: 'Community Connections', text: 'Connect with student-led initiatives and educational organizations that share an interest in financial literacy and risk education.'},
+];
+
 export default function Educators() {
   return (
     <>
       <PageIntro
         eyebrow="FOR EDUCATORS"
-        title="Financial literacy and risk resources for educators."
-        description="Use free introductory lessons and interactive simulations to discuss financial decisions, uncertainty, and trade-offs with students."
+        title="Bring Risk Education to Your Classroom or Club"
+        description="Free interactive learning tools for teachers, student investment clubs, and educational organizations."
       />
       <section className="container section section-tight">
-        <div className="value-grid">
+        <p className="educator-lede">
+          AltRisk Academy is a free educational platform that helps students explore financial literacy,
+          risk management, and responsible decision-making through practical simulations and interactive activities.
+        </p>
+        <div className="value-grid use-case-grid">
+          {useCases.map((item) => (
+            <div className="value-card" key={item.title}>
+              <span className="value-icon"><Icon name={item.icon}/></span>
+              <h2>{item.title}</h2>
+              <p>{item.text}</p>
+            </div>
+          ))}
+        </div>
+        <div className="value-grid" style={{marginTop: 20}}>
           <div className="value-card">
             <span className="value-icon"><Icon name="book"/></span>
             <h2>Classroom-ready topics</h2>
@@ -66,8 +92,46 @@ export default function Educators() {
             simplified educational illustrations, not forecasts or personal investment advice.
           </p>
         </section>
+        <section className="community-section" aria-labelledby="community-heading">
+          <h2 id="community-heading">Educational Community &amp; Collaborations</h2>
+          <p className="community-intro">
+            We believe financial education becomes more impactful when students, educators, and organizations share ideas, resources, and opportunities to learn.
+          </p>
+          <article className="community-card">
+            <a className="community-logo-link" href={MASIC_URL} target="_blank" rel="noopener noreferrer" aria-label="Visit the MASIC website (opens in a new tab)">
+              <Image
+                className="community-logo"
+                src={MASIC_LOGO_SRC}
+                alt="Massachusetts Association of Student Investment Clubs (MASIC) logo"
+                width={150}
+                height={113}
+              />
+            </a>
+            <div className="community-info">
+              <h3>Massachusetts Association of Student Investment Clubs (MASIC)</h3>
+              <p>
+                MASIC connects student investment clubs and encourages collaboration, financial education, and shared learning opportunities among students interested in investing.
+              </p>
+              <a className="text-link community-link" href={MASIC_URL} target="_blank" rel="noopener noreferrer">
+                Visit MASIC Website <Icon name="external" size={17}/>
+              </a>
+            </div>
+          </article>
+        </section>
       </section>
-      <Cta/>
+      <section className="container cta-container">
+        <div className="cta-panel">
+          <div>
+            <span className="eyebrow light-eyebrow">YOUR NEXT STEP</span>
+            <h2>Interested in Bringing AltRisk Academy to Your Classroom or Club?</h2>
+            <p>Explore our free interactive learning tools or get in touch to discuss educational collaboration.</p>
+          </div>
+          <div className="cta-actions">
+            <Link className="button button-white" href="/risk-lab">Explore Risk Labs <Icon name="arrow" size={18}/></Link>
+            <a className="button cta-secondary" href={CONTACT_URL} target="_blank" rel="noopener noreferrer">Get in Touch <Icon name="external" size={18}/></a>
+          </div>
+        </div>
+      </section>
     </>
   );
 }
